@@ -3,6 +3,17 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "quantumenergybeds-vercel.vercel.app"
+        }
+      ],
+      "destination": "https://www.quantumenergybeds.com/",
+      "permanent": true
+    },
+    {
       "source": "/blog/science-of-vibrational-healing",
       "destination": "/blog/vibrational-healing-frequency-energy",
       "permanent": true
