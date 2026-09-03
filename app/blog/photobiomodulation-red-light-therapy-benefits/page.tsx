@@ -38,7 +38,6 @@ export default function BlogPost() {
           <p className="text-xl text-slate-600 mb-4">
             How specific wavelengths of light can transform your cellular health and accelerate healing
           </p>
-          <p className="text-sm text-slate-500">Published: June 3, 2026</p>
         </div>
       </section>
 

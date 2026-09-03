@@ -26,7 +26,6 @@ export default function Article() {
           {/* Header */}
           <header className="mb-12">
             <div className="flex items-center gap-4 text-sm text-slate-500 mb-4">
-              <span>June 15, 2026</span>
               <span>•</span>
               <span>8 min read</span>
               <span>•</span>

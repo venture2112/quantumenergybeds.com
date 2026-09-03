@@ -29,7 +29,6 @@ export default function BlogPost() {
       <article className="pb-20 -mt-20 relative z-10">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8">
-            <span className="text-blue-600 font-semibold">June 4, 2026</span>
             <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
               The Future of Home Wellness: Why Multi-Modal Technology Matters
             </h1>

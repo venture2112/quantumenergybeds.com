@@ -46,7 +46,7 @@ export default function BlogPost() {
           <p className="text-xl text-slate-600 mb-4">
             Discover how reconnecting with Earth's natural energy can transform your health—and how modern quantum technology amplifies these ancient healing principles.
           </p>
-          <p className="text-slate-500">Published: July 5, 2026 | 7 min read</p>
+          <p className="text-slate-500">7 min read</p>
         </div>
       </section>
 

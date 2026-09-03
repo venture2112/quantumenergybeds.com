@@ -44,7 +44,7 @@ export default function BlogPost() {
               Photobiomodulation for Athletic Recovery: Red Light Therapy for Peak Performance
             </h1>
             <p className="text-lg text-slate-600 mb-4">
-              June 21, 2026 • 7 min read
+              7 min read
             </p>
           </div>
         </div>

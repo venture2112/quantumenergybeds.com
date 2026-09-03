@@ -46,7 +46,7 @@ export default function BlogPost() {
           <p className="text-xl text-slate-600 mb-4">
             Discover how nitric oxide production enhances circulation, cellular energy, and overall wellness—and how quantum energy bed technology stimulates this vital molecule for optimal health.
           </p>
-          <p className="text-sm text-slate-500">Published: July 3, 2026 | 8 min read</p>
+          <p className="text-sm text-slate-500">8 min read</p>
         </div>
       </section>
 

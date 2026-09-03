@@ -38,7 +38,6 @@ export default function BlogPost() {
           <p className="text-xl text-slate-600 mb-4">
             How gentle, radiant heat reaches deep into your body to unlock natural wellness potential
           </p>
-          <p className="text-sm text-slate-500">Published: June 4, 2026</p>
         </div>
       </section>
 

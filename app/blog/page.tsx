@@ -296,7 +296,6 @@ export default function Blog() {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-sm font-medium text-blue-600 mb-2">{post.date}</p>
                   <h2 className="text-xl font-semibold text-slate-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
                     {post.title}
                   </h2>

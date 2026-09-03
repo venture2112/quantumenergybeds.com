@@ -46,7 +46,7 @@ export default function BlogPost() {
           <p className="text-xl text-slate-600 mb-4">
             Discover how combining ozone therapy with quantum energy bed technology creates a powerful approach to cellular oxygenation, detoxification, and overall wellness enhancement.
           </p>
-          <p className="text-sm text-slate-500">Published: June 19, 2026 | 8 min read</p>
+          <p className="text-sm text-slate-500">8 min read</p>
         </div>
       </section>
 

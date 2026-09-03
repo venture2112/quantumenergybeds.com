@@ -36,7 +36,6 @@ export default function BlogPost() {
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-blue-600 font-semibold mb-4">June 17, 2026</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-900 leading-tight">
               Red Light Therapy for Skin Health and Anti-Aging: The Science of Cellular Rejuvenation
             </h1>

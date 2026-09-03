@@ -43,7 +43,6 @@ export default function Article() {
               The Synergy of Multi-Modal Therapy: Why Combining Healing Technologies Amplifies Results
             </h1>
             <div className="flex items-center justify-center gap-4 text-slate-300 text-sm">
-              <span>June 23, 2026</span>
               <span>•</span>
               <span>8 min read</span>
             </div>

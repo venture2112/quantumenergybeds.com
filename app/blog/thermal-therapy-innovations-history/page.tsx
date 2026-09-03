@@ -43,7 +43,6 @@ export default function Article() {
               Thermal Therapy Innovations: From Ancient Sweat Lodges to Modern Quantum Wellness
             </h1>
             <div className="flex items-center justify-center gap-4 text-slate-300 text-sm">
-              <span>June 30, 2026</span>
               <span>•</span>
               <span>9 min read</span>
             </div>

@@ -43,7 +43,6 @@ export default function BlogPost() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-900 leading-tight">
             Autophagy and Quantum Wellness: How Cellular Cleansing Powers Longevity
           </h1>
-          <p className="text-lg text-slate-600 mb-4">July 7, 2026</p>
         </div>
       </section>
 

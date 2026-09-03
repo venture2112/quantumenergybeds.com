@@ -44,7 +44,6 @@ export default function BlogPost() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-900 leading-tight">
             Biohacking Your Mitochondria: How Quantum Energy Technology Enhances Cellular Powerhouses
           </h1>
-          <p className="text-lg text-slate-600 mb-4">July 1, 2026</p>
         </div>
       </section>
 
