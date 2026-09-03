@@ -162,7 +162,7 @@ export default function BlogPost() {
                   Discover how specific wavelengths of light can transform your cellular health.
                 </p>
               </Link>
-              <Link href="/blog/science-of-vibrational-healing/" className="group block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
+              <Link href="/blog/vibrational-healing-frequency-energy/" className="group block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <h4 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
                   The Science of Vibrational Healing
                 </h4>

@@ -83,7 +83,7 @@ export default function BlogPost() {
             <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-6">The Science of Synergy</h2>
             
             <p className="text-slate-600 leading-relaxed mb-6">
-              The true power of modern wellness technology lies in combining complementary therapies. When red light therapy is paired with <Link href="/blog/science-of-vibrational-healing/" className="text-blue-600 hover:text-blue-700 underline">vibrational therapy frequencies</Link> and far infrared heat, the benefits multiply. This synergistic approach addresses wellness at multiple levels—cellular, circulatory, and energetic.
+              The true power of modern wellness technology lies in combining complementary therapies. When red light therapy is paired with <Link href="/blog/vibrational-healing-frequency-energy/" className="text-blue-600 hover:text-blue-700 underline">vibrational therapy frequencies</Link> and far infrared heat, the benefits multiply. This synergistic approach addresses wellness at multiple levels—cellular, circulatory, and energetic.
             </p>
 
             <p className="text-slate-600 leading-relaxed mb-6">
@@ -144,7 +144,7 @@ export default function BlogPost() {
           <div className="mt-12 pt-8 border-t border-slate-200">
             <h3 className="text-lg font-semibold text-slate-900 mb-6">Related Articles</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/blog/science-of-vibrational-healing/" className="group block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
+              <Link href="/blog/vibrational-healing-frequency-energy/" className="group block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <h4 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
                   The Science of Vibrational Healing
                 </h4>
@@ -152,12 +152,12 @@ export default function BlogPost() {
                   Explore how specific frequencies can promote healing and restore balance.
                 </p>
               </Link>
-              <Link href="/blog/understanding-biophotons/" className="group block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
+              <Link href="/blog/cellular-energy-atp-light-therapy/" className="group block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <h4 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
-                  Understanding Biophotons
+                  Cellular Energy and ATP Production
                 </h4>
                 <p className="text-sm text-slate-600">
-                  Discover how light energy facilitates cellular communication.
+                  Discover how light therapy supports cellular energy and ATP production.
                 </p>
               </Link>
             </div>
