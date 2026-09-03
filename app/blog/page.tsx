@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import type { Metadata } from "next";
+import { questionArticles } from "../data/questionArticles";
 
 export const metadata: Metadata = {
   title: "Quantum Energy Beds Blog 2026 | Science of PEMF, Red Light & Terahertz Therapy",
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   const posts = [
+    ...questionArticles.map((article) => ({
+      title: article.title,
+      excerpt: article.description,
+      slug: article.slug,
+      image: article.image,
+    })),
     {
       title: "Autophagy and Quantum Wellness: How Cellular Cleansing Powers Longevity",
       excerpt: "Discover how autophagy—your body's cellular recycling system—combines with quantum energy technology to enhance longevity, detoxification, and cellular renewal.",

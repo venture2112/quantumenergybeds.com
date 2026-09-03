@@ -1,4 +1,47 @@
 import type { MetadataRoute } from "next";
+import { questionArticleSlugs } from "./data/questionArticles";
+
+const existingBlogSlugs = [
+  "autophagy-cellular-cleansing",
+  "bioavailability-nutrient-absorption",
+  "biohacking-mitochondria-cellular-energy",
+  "biohacking-sleep-multi-modal-technology",
+  "blue-light-therapy-benefits",
+  "business-case-wellness-technology",
+  "cellular-energy-atp-light-therapy",
+  "chromotherapy-practical-guide",
+  "circadian-rhythms-light-wellness",
+  "detoxification-myths-facts",
+  "emf-protection-technology-wellness",
+  "energy-medicine-science-quantum-healing",
+  "far-infrared-athletic-recovery",
+  "far-infrared-heat-therapy-benefits",
+  "far-infrared-therapy-deep-penetrating-healing",
+  "future-home-wellness-multi-modal",
+  "graphene-heating-thermal-therapy",
+  "grounding-earthing-quantum-wellness",
+  "history-light-therapy",
+  "infrared-therapy-cellular-healing",
+  "jade-tourmaline-ancient-stones-modern",
+  "mind-body-connection-quantum",
+  "multi-modal-therapy-synergy",
+  "nitric-oxide-quantum-wellness-circulation",
+  "optimizing-sleep-environment",
+  "ozone-therapy-quantum-wellness-oxygenation",
+  "pemf-therapy-electromagnetic-wellness",
+  "photobiomodulation-athletic-recovery-performance",
+  "photobiomodulation-red-light-therapy-benefits",
+  "red-light-therapy-skin-health-anti-aging",
+  "science-negative-ions-air-purifiers",
+  "seasonal-wellness-year-round",
+  "sound-therapy-brainwave-entrainment",
+  "stress-cellular-health-connection",
+  "terahertz-waves-quantum-wellness",
+  "thermal-therapy-innovations-history",
+  "understanding-inflammation-health",
+  "vibrational-healing-frequency-energy",
+  "wellness-sanctuary-home-design",
+];
 
 const routes = [
   "",
@@ -17,6 +60,8 @@ const routes = [
   "/california-consumer-privacy-act-ccpa",
   "/cookie-privacy-policy",
   "/dmca",
+  ...existingBlogSlugs.map((slug) => `/blog/${slug}`),
+  ...questionArticleSlugs.map((slug) => `/blog/${slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
