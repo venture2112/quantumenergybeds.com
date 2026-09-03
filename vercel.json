@@ -1,6 +1,29 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/blog/science-of-vibrational-healing",
+      "destination": "/blog/vibrational-healing-frequency-energy",
+      "permanent": true
+    },
+    {
+      "source": "/blog/understanding-biophotons",
+      "destination": "/blog/cellular-energy-atp-light-therapy",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "quantumenergybeds-vercel.vercel.app"
+        }
+      ],
+      "destination": "https://www.quantumenergybeds.com/:path*",
+      "permanent": true
+    }
+  ],
   "builds": [
     {
       "src": "package.json",
