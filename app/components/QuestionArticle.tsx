@@ -56,7 +56,7 @@ export default function QuestionArticle({ article }: { article: QuestionArticleD
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[320px] sm:h-[400px] w-full">
         <Image src={article.image} alt={article.imageAlt} fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent" />
       </div>
@@ -64,7 +64,7 @@ export default function QuestionArticle({ article }: { article: QuestionArticleD
       <article className="pb-20 -mt-20 relative z-10">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <Link href="/blog/" className="inline-block text-blue-700 hover:underline mb-4">← Back to the blog</Link>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{article.title}</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">{article.title}</h1>
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-slate-600 mb-8">{article.intro}</p>
@@ -77,9 +77,11 @@ export default function QuestionArticle({ article }: { article: QuestionArticleD
             {article.sections.map((section) => (
               <section key={section.heading}>
                 <h2 className="text-2xl font-bold mt-12 mb-4">{section.heading}</h2>
-                {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="text-slate-700 leading-7 mb-5">{paragraph}</p>
+                ))}
                 {section.bullets && (
-                  <ul className="list-disc pl-6 space-y-2">
+                  <ul className="list-disc pl-6 mt-2 mb-7 space-y-2 text-slate-700 leading-7">
                     {section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
                   </ul>
                 )}
@@ -108,7 +110,7 @@ export default function QuestionArticle({ article }: { article: QuestionArticleD
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-4">Sources and further reading</h2>
-            <ul>
+            <ul className="space-y-2 mb-8">
               {article.sources.map((source) => (
                 <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>
               ))}
