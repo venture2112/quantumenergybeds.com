@@ -8,8 +8,32 @@ const fdaDeviceTerms = "https://www.fda.gov/medical-devices/consumers-medical-de
 const fdaClearances = "https://www.fda.gov/medical-devices/products-and-medical-procedures/device-approvals-and-clearances";
 const fdaMagnets = "https://www.fda.gov/radiation-emitting-products/cell-phones/magnets-cell-phones-and-smart-watches-may-affect-pacemakers-and-other-implanted-medical-devices";
 const ftcClaims = "https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance";
+const fdaPbmGuidance = "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/photobiomodulation-pbm-devices-premarket-notification-510k-submissions";
+const clothingTransmissionStudy = "https://www.nature.com/articles/s41598-025-09785-3";
 
 export const questionArticles: QuestionArticleData[] = [
+  {
+    slug: "does-red-light-therapy-work-through-clothes",
+    title: "Does Red Light Therapy Work Through Clothes?",
+    description: "Learn how clothing can change red and near-infrared light exposure, what to wear in a full-body red light bed, and why device instructions matter.",
+    image: "/images/questions/red-light-through-clothes.webp",
+    imageAlt: "Woman wearing athletic clothing and protective goggles in a full-body red light therapy bed",
+    intro: "What you wear during a red light session matters because fabric sits between the LEDs and your skin. The answer is not as simple as saying that all light passes through clothing—or that none of it does.",
+    quickAnswer: "Some near-infrared light can pass through certain fabrics, but clothing can absorb, scatter, or reflect part of the output. That makes the dose reaching skin less predictable. For consistent exposure, follow the instructions for your exact device and leave the intended treatment area uncovered when the manual directs you to do so.",
+    sections: [
+      { heading: "Why fabric changes the delivered light", paragraphs: ["Photobiomodulation depends on more than seeing a red glow. Wavelength, irradiance at the skin, distance, exposure time, and treatment area all help determine the delivered dose. Placing fabric in the light path adds another variable.", "A 2025 laboratory study found that 850-nanometer near-infrared light remained detectable through layered clothing, while visible light transmission was much lower. The test was qualitative and did not show that a particular health outcome would occur through clothing. Fabric type, weave, layers, dye, fit, and the device’s wavelengths can all change transmission."] },
+      { heading: "What should you wear in a full-body light bed?", paragraphs: ["Use the operating manual as the deciding source. If it calls for direct exposure, uncover only the area you want illuminated while staying within your comfort and privacy preferences. In a private full-body bed, that may mean wearing undergarments or simple minimal clothing rather than ordinary layered clothes.", "Do not assume a thin shirt delivers a known percentage of the stated output. Unless the manufacturer measured the device through that exact fabric, there is no reliable way to calculate the dose reaching your skin at home."] },
+      { heading: "Clothing does not affect every modality the same way", paragraphs: ["A multi-modal wellness bed may combine red or near-infrared LEDs with PEMF, far-infrared heat, vibration, or sound. Advice about clothing and light should not automatically be transferred to the other features. Each modality has different operating parameters, precautions, and intended setup.", "Likewise, findings from an 850-nanometer light study do not establish how a complete multi-modal bed performs. Evaluate the light feature by its specifications and use the combined system only as instructed."] },
+      { heading: "Do not compensate by guessing", paragraphs: ["If you prefer to remain covered, ask the manufacturer whether the recommended program allows it. Do not increase intensity or extend the timer to compensate for clothing. FDA’s draft guidance for photobiomodulation devices treats wavelength, treatment distance, energy dose, irradiance, area, and session schedule as important device-specific information.", "Follow the stated eye-protection rules. Pause and obtain individualized guidance if you have significant light sensitivity, an eye condition, an implanted device, or take medication that may increase photosensitivity."] },
+    ],
+    faqs: [
+      { question: "Does near-infrared light pass through clothing?", answer: "Some 850-nanometer near-infrared light has been detected through certain layered fabrics, but transmission varies and detection does not prove an effective dose or health benefit." },
+      { question: "Does red light therapy need bare skin?", answer: "Direct skin exposure removes the uncertain barrier created by fabric. Follow the exact device manual for treatment-area preparation and clothing guidance." },
+      { question: "Can I make a session longer if I wear clothes?", answer: "Do not adjust time or intensity to offset clothing unless the manufacturer provides a specific, tested instruction for that setup." },
+    ],
+    sources: [{ label: "FDA: Draft guidance for photobiomodulation devices", url: fdaPbmGuidance }, { label: "Scientific Reports: 850 nm light and clothing transmission", url: clothingTransmissionStudy }, { label: "Review of photobiomodulation parameters", url: pbmReview }],
+    related: [{ title: "Do You Need Eye Protection During Red Light Therapy?", slug: "do-you-need-eye-protection-red-light-therapy" }, { title: "What Does a Quantum Energy Bed Session Feel Like?", slug: "what-does-quantum-energy-bed-session-feel-like" }],
+  },
   {
     slug: "what-is-multi-modal-wellness-bed",
     title: "What Is a Multi-Modal Wellness Bed and How Does It Work?",
