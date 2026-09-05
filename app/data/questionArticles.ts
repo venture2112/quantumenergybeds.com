@@ -10,8 +10,33 @@ const fdaMagnets = "https://www.fda.gov/radiation-emitting-products/cell-phones/
 const ftcClaims = "https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance";
 const fdaPbmGuidance = "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/photobiomodulation-pbm-devices-premarket-notification-510k-submissions";
 const clothingTransmissionStudy = "https://www.nature.com/articles/s41598-025-09785-3";
+const fdaTanningRisks = "https://www.fda.gov/radiation-emitting-products/tanning/risks-tanning";
+const cdcSkinCancerPrevention = "https://www.cdc.gov/skin-cancer/prevention/index.html";
+const aadRedLightSafety = "https://www.aad.org/public/cosmetic/safety/red-light-therapy";
 
 export const questionArticles: QuestionArticleData[] = [
+  {
+    slug: "does-red-light-therapy-tan-you",
+    title: "Does Red Light Therapy Tan You? Red Light Beds vs. Tanning Beds",
+    description: "Learn whether red light therapy uses UV or causes a tan, how red light beds differ from tanning beds, and what to verify before a session.",
+    image: "/images/questions/red-light-bed-vs-tanning.webp",
+    imageAlt: "Man wearing protective goggles while lying in a full-body red light wellness bed",
+    intro: "A full-body red light bed can resemble a tanning bed, but shape does not determine what kind of light a device emits. The meaningful difference is the wavelength information in the product specifications and instructions.",
+    quickAnswer: "A dedicated red light or photobiomodulation device is not designed to create a UV tan. It typically uses visible red and sometimes near-infrared wavelengths rather than the ultraviolet radiation used by tanning equipment. Confirm the exact device, because a red glow or the word “red” in a product name does not prove that it is UV-free.",
+    sections: [
+      { heading: "Red light and ultraviolet light are different", paragraphs: ["FDA describes ultraviolet, visible red, and infrared as different wavelength regions. Photobiomodulation, or PBM, uses controlled light from a specified device. Red light is visible; near-infrared is invisible. Neither term means ultraviolet.", "Tanning is a response to UV exposure. FDA explains that skin increases melanin after UV radiation and that the color change is a sign of damage. Equipment documented to emit only red and near-infrared wavelengths should not produce a UV-driven tan."] },
+      { heading: "Why the two beds are easy to confuse", paragraphs: ["Both formats may place a person beneath rows of lamps while lying down. A tanning bed is intended to darken skin with UV. A red light bed delivers specified red or near-infrared light across a broad area.", "Do not identify equipment by its enclosure, lamp color, or location. Combination equipment may include more than one light source. Read the label, wavelength specifications, and manual for the exact model."] },
+      { heading: "What if the skin looks red afterward?", paragraphs: ["Temporary warmth or flushing is not a melanin-based tan. However, visible light can affect skin tones differently, and the American Academy of Dermatology notes that irritation or pigment changes can occur. Long-term safety questions also remain for home use.", "Stop and seek advice for persistent discoloration, pain, blistering, eye symptoms, or another unexpected reaction. Redness does not prove that a session was effective."] },
+      { heading: "How to verify a device before use", paragraphs: ["Ask for the model number, manual, wavelengths, exposure time, treatment distance, and eye-protection instructions. If documentation mentions UVA, UVB, tanning, or a hybrid function, UV precautions still apply. Red light does not cancel UV risk.", "Follow the recommended program. People with photosensitive conditions, eye concerns, a skin-cancer history, or medications that increase light sensitivity should discuss the specific equipment with a qualified healthcare professional before use."] },
+    ],
+    faqs: [
+      { question: "Does red light therapy use UV light?", answer: "A dedicated red or near-infrared PBM device is not designed to use UV, but verify the exact wavelengths instead of relying on its name or glow." },
+      { question: "Is a red light bed the same as a tanning bed?", answer: "No. The shape may be similar, but tanning beds use UV to darken skin while red light beds use different wavelengths." },
+      { question: "Can a hybrid bed include both red light and UV?", answer: "Yes. If the manual lists UVA, UVB, or tanning functions, treat it as UV-emitting equipment and follow all applicable warnings." },
+    ],
+    sources: [{ label: "FDA: Photobiomodulation device draft guidance", url: fdaPbmGuidance }, { label: "FDA: The risks of tanning", url: fdaTanningRisks }, { label: "CDC: Reducing risk for skin cancer", url: cdcSkinCancerPrevention }, { label: "American Academy of Dermatology: Red light therapy safety", url: aadRedLightSafety }],
+    related: [{ title: "Do You Need Eye Protection During Red Light Therapy?", slug: "do-you-need-eye-protection-red-light-therapy" }, { title: "Red Light Panel vs. Full-Body Wellness Bed", slug: "red-light-panel-vs-full-body-wellness-bed" }],
+  },
   {
     slug: "does-red-light-therapy-work-through-clothes",
     title: "Does Red Light Therapy Work Through Clothes?",
