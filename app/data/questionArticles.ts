@@ -16,6 +16,28 @@ const aadRedLightSafety = "https://www.aad.org/public/cosmetic/safety/red-light-
 
 export const questionArticles: QuestionArticleData[] = [
   {
+    slug: "what-do-660-nm-850-nm-mean-red-light-therapy",
+    title: "What Do 660 nm and 850 nm Mean in Red Light Therapy?",
+    description: "Learn what 660 nm and 850 nm mean in red light therapy, why wavelength is not the same as power or dose, and which specifications matter when comparing devices.",
+    image: "/images/questions/red-light-660-850-wavelengths.webp",
+    imageAlt: "Open full-body red light wellness bed with rows of glowing red LEDs in a bright studio",
+    intro: "Red light equipment is often advertised with numbers such as 660 nm and 850 nm. They describe one part of the light a device produces—not how powerful, effective, or appropriate the complete system will be.",
+    quickAnswer: "“nm” means nanometer, a unit used to describe wavelength. In consumer photobiomodulation equipment, 660 nm is visible red light, while 850 nm is near-infrared light and is usually outside normal human vision. Neither is automatically better. Wavelength must be evaluated with irradiance, radiant dose, distance, exposure time, treatment area, and the device’s intended use.",
+    sections: [
+      { heading: "Wavelength identifies the type of light", paragraphs: ["A wavelength number locates light within the electromagnetic spectrum. At 660 nm, LEDs produce a visible deep-red glow. At 850 nm, the output is near-infrared, so active LEDs may appear dim or dark to the eye. Visible brightness is therefore not a reliable measurement of output.", "Photobiomodulation, or PBM, commonly uses visible red and near-infrared light. These are non-ionizing wavelengths and are different from the ultraviolet light used by tanning equipment."] },
+      { heading: "Why 660 nm and 850 nm are not interchangeable", paragraphs: ["Red and near-infrared wavelengths interact differently with skin and tissue. Near-infrared generally reaches deeper than shorter red wavelengths, but depth is not determined by wavelength alone. Tissue type, skin contact, beam geometry, and other device parameters also matter.", "That general pattern does not prove that an 850 nm device will produce a particular result or that adding both wavelengths makes a bed more effective. Evidence from one device, dose, or indication should not be transferred to a different consumer system."] },
+      { heading: "Wavelength does not tell you the dose", paragraphs: ["FDA’s draft guidance for PBM medical devices treats wavelength as one specification among several. It separately identifies radiant power, irradiance, fluence or radiant dose, spot size, treatment distance, output mode, pulse settings, session frequency, and treatment area.", "In plain language, two products can list the same wavelength yet deliver very different exposure. More intensity is not automatically better, either. PBM research describes dose-dependent responses, which is why extending a session or moving closer without instructions is not a sound substitute for verified specifications."] },
+      { heading: "How to compare a home light system", paragraphs: ["Ask for the exact wavelengths and whether each channel can be controlled separately. Check where irradiance was measured, the recommended distance, session time, illuminated area, output mode, and eye-protection instructions. A clear manual is more useful than a long wavelength list.", "For a multi-modal wellness bed, evaluate the PBM component separately from PEMF, far-infrared heat, vibration, and other features. Follow the complete system’s instructions, and do not treat wavelength claims as proof that the bed diagnoses or treats a health condition."] },
+    ],
+    faqs: [
+      { question: "What does nm mean in red light therapy?", answer: "It means nanometer, the unit used to state the wavelength of light emitted by the device." },
+      { question: "Is 850 nm stronger than 660 nm?", answer: "No. A larger wavelength number does not mean greater power or dose. Those depend on separate specifications such as irradiance, exposure time, area, and distance." },
+      { question: "Can a device use 660 nm and 850 nm together?", answer: "Yes, some systems combine visible red and near-infrared LEDs. Use the manufacturer’s tested programs rather than assuming both channels should always run together." },
+    ],
+    sources: [{ label: "FDA: Draft guidance for photobiomodulation devices", url: fdaPbmGuidance }, { label: "American Society for Laser Medicine and Surgery: Photobiomodulation", url: "https://www.aslms.org/topic/photobiomodulation/" }, { label: "Review of light parameters and photobiomodulation efficacy", url: pbmReview }, { label: "Review: Photobiomodulation—lasers versus LEDs", url: ledReview }],
+    related: [{ title: "Red Light Therapy Panel vs. Full-Body Wellness Bed", slug: "red-light-panel-vs-full-body-wellness-bed" }, { title: "Does Red Light Therapy Tan You? Red Light Beds vs. Tanning Beds", slug: "does-red-light-therapy-tan-you" }],
+  },
+  {
     slug: "does-red-light-therapy-tan-you",
     title: "Does Red Light Therapy Tan You? Red Light Beds vs. Tanning Beds",
     description: "Learn whether red light therapy uses UV or causes a tan, how red light beds differ from tanning beds, and what to verify before a session.",
