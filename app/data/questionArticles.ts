@@ -16,6 +16,29 @@ const aadRedLightSafety = "https://www.aad.org/public/cosmetic/safety/red-light-
 
 export const questionArticles: QuestionArticleData[] = [
   {
+    slug: "what-does-irradiance-mean-red-light-therapy",
+    title: "What Does Irradiance Mean in Red Light Therapy?",
+    description: "Learn what irradiance means in red light therapy, how it differs from dose, and how to compare device measurements without assuming higher is better.",
+    image: "/images/questions/red-light-irradiance-meter.webp",
+    imageAlt: "Optical light meter measuring the LED surface of an open full-body red light wellness bed",
+    intro: "Irradiance is one of the most useful numbers on a red light device specification sheet—and one of the easiest to misread when products are compared.",
+    quickAnswer: "Irradiance describes radiant power arriving at a surface per unit area. Red light products often report it in milliwatts per square centimeter (mW/cm²). It is not the same as wavelength or total dose, and a higher number does not by itself show that a device is safer, more effective, or better suited to a particular use.",
+    sections: [
+      { heading: "Irradiance is power spread over an area", paragraphs: ["A light source has radiant power, commonly expressed in watts. Irradiance describes how much of that power reaches each unit of surface area. In practical terms, it helps explain the rate at which light energy is delivered at the measured location.", "Wavelength answers a different question: what kind of light is present. Two devices can list the same 660 nm or 850 nm wavelengths yet produce different irradiance because their LED layout, optics, output, distance, and illuminated area differ."] },
+      { heading: "Measurement distance can change the number", paragraphs: ["An irradiance claim is meaningful only when its measurement conditions are clear. Output measured against an LED surface cannot be compared directly with output measured several inches away. Distance, angle, sensor type, warm-up time, pulse settings, and which wavelength channels were active can all affect a reading.", "Coverage matters too. A high reading at one central point does not establish even output across a full-body bed. Ask whether the manufacturer supplies a measurement map or range across the usable treatment area, not only a single peak value."] },
+      { heading: "Irradiance and radiant dose are related, but different", paragraphs: ["Radiant dose, also called fluence, describes energy delivered per area and is often reported in joules per square centimeter (J/cm²). For a continuous, steady output, dose depends on irradiance and exposure time. Pulsed output and changing intensity require additional information.", "FDA’s draft guidance for photobiomodulation medical devices lists irradiance, radiant dose, wavelength, pulse characteristics, treatment distance, treatment area, and session schedule as separate device parameters. That is a useful reminder that no single specification defines an entire protocol."] },
+      { heading: "Why more is not automatically better", paragraphs: ["Photobiomodulation research uses specific devices and protocols, and reviews describe dose-dependent responses. A larger irradiance number does not allow findings from one studied system to be transferred to another device, another treatment area, or a complete multi-modal wellness bed.", "Follow the tested operating instructions rather than moving closer or extending a session to create a self-calculated dose. For a multi-modal bed, evaluate the light specification separately from PEMF, heat, vibration, and other features. An irradiance claim for the LEDs does not validate medical claims for the complete system."] },
+      { heading: "What to request before comparing devices", paragraphs: ["Ask for irradiance at the recommended treatment distance, the wavelengths and channels used during testing, the size and uniformity of the illuminated area, output mode, exposure time, and the measuring instrument or independent test method. Compare like with like, and treat numbers without conditions as incomplete."] },
+    ],
+    faqs: [
+      { question: "Is irradiance the same as red light therapy dose?", answer: "No. Irradiance is power per area at a point in time; radiant dose also accounts for how long that exposure is delivered." },
+      { question: "Does higher irradiance mean better red light therapy?", answer: "Not by itself. Wavelength, distance, time, coverage, output mode, intended use, and device-specific evidence also matter." },
+      { question: "Why should irradiance include a measurement distance?", answer: "The amount of light reaching a surface can change with distance, so a number without its test distance is difficult to compare responsibly." },
+    ],
+    sources: [{ label: "FDA: Draft guidance for photobiomodulation devices", url: fdaPbmGuidance }, { label: "Review of light parameters and photobiomodulation efficacy", url: pbmReview }, { label: "Review: Photobiomodulation—lasers versus LEDs", url: ledReview }],
+    related: [{ title: "What Do 660 nm and 850 nm Mean in Red Light Therapy?", slug: "what-do-660-nm-850-nm-mean-red-light-therapy" }, { title: "Red Light Therapy Panel vs. Full-Body Wellness Bed", slug: "red-light-panel-vs-full-body-wellness-bed" }],
+  },
+  {
     slug: "what-do-660-nm-850-nm-mean-red-light-therapy",
     title: "What Do 660 nm and 850 nm Mean in Red Light Therapy?",
     description: "Learn what 660 nm and 850 nm mean in red light therapy, why wavelength is not the same as power or dose, and which specifications matter when comparing devices.",
