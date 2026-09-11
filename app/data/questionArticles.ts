@@ -13,8 +13,91 @@ const clothingTransmissionStudy = "https://www.nature.com/articles/s41598-025-09
 const fdaTanningRisks = "https://www.fda.gov/radiation-emitting-products/tanning/risks-tanning";
 const cdcSkinCancerPrevention = "https://www.cdc.gov/skin-cancer/prevention/index.html";
 const aadRedLightSafety = "https://www.aad.org/public/cosmetic/safety/red-light-therapy";
+const ftcWarranties = "https://consumer.ftc.gov/articles/warranties";
+const cfpbInstallmentLoans = "https://www.consumerfinance.gov/ask-cfpb/what-is-a-personal-installment-loan-en-2114/";
+const qebFaq = "https://www.quantumenergybeds.com/faq";
+const qebFinancing = "https://www.quantumenergybeds.com/financing";
 
 export const questionArticles: QuestionArticleData[] = [
+  {
+    slug: "how-much-does-quantum-energy-bed-cost",
+    title: "How Much Does a Quantum Energy Bed Cost?",
+    description: "See the current Quantum Energy Bed price, what is included, which ownership costs to check, and how to compare cash and financing offers.",
+    image: "/images/questions/quantum-energy-bed-cost.webp",
+    imageAlt: "Adult buyers discussing the purchase of a full-body lay-down wellness bed in a bright showroom",
+    intro: "A multi-modal wellness bed is a major purchase, so the useful number is not just the advertised price. Buyers also need to understand delivery, setup, financing, warranty coverage, and possible return costs.",
+    quickAnswer: "Quantum Energy Beds currently lists its full-body system at $14,900 with free standard delivery to the door. Optional white-glove setup, financing charges, room preparation, maintenance, and return-related fees can change the total cost. Confirm a written, current quote and the exact model, included equipment, delivery level, warranty, and payment terms before ordering.",
+    sections: [
+      {
+        heading: "Start with the current listed price",
+        paragraphs: [
+          "The current price published by Quantum Energy Beds is $14,900. The company’s FAQ says standard delivery to the door is included, while optional white-glove service is available for setup and placement. Because prices, inventory, promotions, and service areas can change, request a dated written quote before treating any online figure as final.",
+          "Make sure the quote identifies the exact bed model and every included item. A useful order summary should list the system, controller, standard accessories, manuals, delivery method, warranty, and any training or remote setup support. If a feature was discussed during a sales call, put it in writing rather than assuming it is standard."
+        ]
+      },
+      {
+        heading: "Calculate the total delivered and installed cost",
+        paragraphs: [
+          "Free standard delivery does not necessarily mean placement inside a room. Ask whether the carrier provides curbside, threshold, or door delivery; whether a liftgate or appointment is included; and who is responsible for unpacking, assembly, debris removal, and moving the bed through doors or up stairs. Optional white-glove pricing should state exactly what the crew will do.",
+          "Room preparation is another variable. Confirm the bed and crate dimensions, weight, doorway and turning clearance, required floor space, ventilation, and the electrical connection for the exact model. Do not assume that specifications from another red-light bed or wellness pod apply. If electrical work or structural review is needed, obtain qualified local estimates before delivery."
+        ],
+        bullets: [
+          "Equipment price and applicable sales tax",
+          "Delivery level, placement, assembly, and packaging removal",
+          "Room, doorway, floor, ventilation, and electrical preparation",
+          "Accessories, cleaning supplies, maintenance, and service plans",
+          "Interest, lender fees, or early-payoff terms if financed",
+          "Return freight, restocking fees, and any nonrefundable services"
+        ]
+      },
+      {
+        heading: "Compare cash and financing by total dollars",
+        paragraphs: [
+          "Financing can spread a large purchase over time, but the monthly payment is only one part of the offer. Compare the amount financed, down payment, annual percentage rate, fixed or variable rate, term, fees, total of payments, late-payment rules, and whether there is a prepayment penalty. Approval and terms depend on the lender and the applicant; a calculator example is not a credit offer.",
+          "The Consumer Financial Protection Bureau notes that personal installment loans are repaid over a set period and that rates and terms can depend on factors such as credit, income, debts, loan amount, and loan length. Compare more than one available option, and keep a copy of the final disclosures with the purchase documents."
+        ]
+      },
+      {
+        heading: "Price should be compared with documentation and support",
+        paragraphs: [
+          "A higher price or longer modality list does not establish better results. Compare controls, operating instructions, safety information, technical specifications, construction, replacement-part availability, service response, and whether the features match the routine you realistically plan to use. Research about one component or protocol should not be treated as proof for the complete multi-modal bed.",
+          "The Federal Trade Commission says objective health claims must be truthful, not misleading, and adequately supported. Treat cure promises, guaranteed outcomes, and testimonials presented as scientific proof as warning signs. Purchase value should rest on verifiable equipment facts and service terms, not unsupported medical claims."
+        ]
+      },
+      {
+        heading: "Read the warranty and return policy before paying",
+        paragraphs: [
+          "FTC consumer guidance recommends reading a written warranty before a major purchase and checking its duration, exclusions, remedy, and claims process. For a large wellness bed, ask which parts and labor are covered, who diagnoses a problem, whether service is remote or on-site, and who pays freight if a component or the complete unit must be shipped.",
+          "Quantum Energy Beds’ FAQ currently describes a 14-day refund policy under stated conditions and a 15% restocking fee. Verify when that period begins, the required condition and packaging, who authorizes a return, and which shipping or service costs apply. Save the quote, receipt, warranty, return terms, serial number, and all written promises together."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is shipping included in the $14,900 price?",
+        answer: "Quantum Energy Beds currently says free standard delivery to the door is included. Optional white-glove setup may cost extra, so confirm the delivery level and destination in writing."
+      },
+      {
+        question: "Can you finance a Quantum Energy Bed?",
+        answer: "Financing options are advertised, subject to approval and lender terms. Compare APR, fees, term, down payment, total of payments, and early-payoff rules—not only the monthly amount."
+      },
+      {
+        question: "What costs should I check beyond the purchase price?",
+        answer: "Check sales tax, white-glove service, room or electrical preparation, accessories, maintenance, financing charges, service plans, and possible return freight or restocking fees."
+      }
+    ],
+    sources: [
+      { label: "Quantum Energy Beds: Pricing, delivery, and return FAQ", url: qebFaq },
+      { label: "Quantum Energy Beds: Financing information", url: qebFinancing },
+      { label: "FTC consumer guidance: Warranties", url: ftcWarranties },
+      { label: "CFPB: Personal installment loans", url: cfpbInstallmentLoans },
+      { label: "FTC: Health Products Compliance Guidance", url: ftcClaims }
+    ],
+    related: [
+      { title: "What Should You Look for When Buying a Home Wellness Bed?", slug: "what-to-look-for-buying-home-wellness-bed" },
+      { title: "Is a Quantum Energy Bed FDA Approved?", slug: "is-quantum-energy-bed-fda-approved" }
+    ]
+  },
   {
     slug: "what-does-irradiance-mean-red-light-therapy",
     title: "What Does Irradiance Mean in Red Light Therapy?",
