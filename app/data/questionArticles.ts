@@ -20,6 +20,88 @@ const qebFinancing = "https://www.quantumenergybeds.com/financing";
 
 export const questionArticles: QuestionArticleData[] = [
   {
+    slug: "how-long-is-quantum-energy-bed-session",
+    title: "How Long Is a Quantum Energy Bed Session?",
+    description: "Learn the typical Quantum Energy Bed session length, why timing varies by program, and how to plan a comfortable first session.",
+    image: "/images/questions/quantum-energy-bed-session-length.webp",
+    imageAlt: "Wellness professional adjusting the controls beside an adult lying in a full-body Quantum Energy Bed",
+    intro: "Session length sounds like a simple timer question, but a multi-modal bed can combine light, electromagnetic fields, heat, vibration, and sound. The appropriate time therefore depends on the exact equipment, selected program, and operating instructions.",
+    quickAnswer: "Quantum Energy Beds currently says a typical session lasts 30 to 45 minutes. Most users begin with 30 minutes and may extend the time based on comfort and their routine. That range is a practical starting point—not a universal dose for every wellness bed or modality. Use the program and limits supplied for the exact model, and stop early if the session becomes uncomfortable.",
+    sections: [
+      {
+        heading: "Plan on 30 to 45 minutes for the session itself",
+        paragraphs: [
+          "The company’s current FAQ identifies 30 to 45 minutes as the typical Quantum Energy Bed session range. It also says most users start at 30 minutes and extend the session according to comfort. For scheduling purposes, allow additional time to get situated, choose the program, adjust supports or eye protection, and finish without rushing.",
+          "An appointment may include time outside the timed program for controls, setup, cleaning, and room turnover. Ask whether the quoted length means time on the bed or total time in the room."
+        ]
+      },
+      {
+        heading: "Why there is no single time for every bed",
+        paragraphs: [
+          "A Quantum Energy Bed is a combined platform, not one standardized treatment. Different models and programs may use different light output, PEMF settings, heat levels, vibration patterns, or combinations. The timing for one product should not be copied to another simply because both are called wellness beds.",
+          "FDA’s draft guidance for photobiomodulation medical devices lists treatment duration separately from wavelength, irradiance, radiant dose, treatment distance, sessions per week, and total number of sessions. That distinction is useful even when discussing general wellness equipment: time is only one parameter, and it does not describe the complete exposure."
+        ]
+      },
+      {
+        heading: "A sensible approach to the first session",
+        paragraphs: [
+          "Begin with the introductory or standard program in the current manual, even if you have used another type of red-light panel, PEMF mat, sauna, or massage device. Learn how to pause or stop the bed before the session begins, keep controls accessible, and tell the operator promptly if you want to end early.",
+          "Make comfort adjustments before starting. Clothing, bolsters, eye protection, temperature, hydration, and room ventilation can change how easy it is to remain still. If the equipment allows several independent settings, changing one variable at a time makes it easier to understand what altered the experience."
+        ],
+        bullets: [
+          "Confirm which modalities and settings the selected program uses",
+          "Use only the supports and eye protection allowed by the manual",
+          "Start with the stated introductory time rather than the maximum",
+          "Stop for overheating, dizziness, pain, skin or eye discomfort, or any unusual symptom"
+        ]
+      },
+      {
+        heading: "Longer is not automatically better",
+        paragraphs: [
+          "Adding minutes does not guarantee a stronger wellness effect. Photobiomodulation research uses specific combinations of wavelength, output, distance, area, and exposure time; reviews describe responses that depend on dose and protocol. A study using one device cannot establish the ideal duration for a different light source or for the complete multi-modal bed.",
+          "The same caution applies to the other features. Heat tolerance varies, while PEMF exposure depends on specifications such as field strength, waveform, frequency, and placement. Do not add together the maximum times from separate devices or extend a combined program to compensate for clothing, distance, a low setting, or a missed session unless the manufacturer provides that exact instruction."
+        ]
+      },
+      {
+        heading: "When to shorten the session or seek individual guidance",
+        paragraphs: [
+          "End the session if you feel overheated, lightheaded, nauseated, painful, unusually weak, or uncomfortable. Symptoms are not proof that a program is working. Record the program, settings, and time so that a manufacturer, practitioner, or licensed healthcare professional can review what happened before you try again.",
+          "Ask for individualized guidance before use if you have an implanted electronic device, significant light sensitivity, an eye condition, pregnancy, an active medical concern, or medication that may affect heat or light sensitivity. The product manual and a qualified healthcare professional—not a general internet schedule—should guide personal precautions."
+        ]
+      },
+      {
+        heading: "Build a routine around quality, not the clock",
+        paragraphs: [
+          "For home use, choose a time when you can set up and finish calmly rather than squeezing a long program into a busy window. For professional use, schedule enough space between clients for questions, safe entry and exit, cleaning, and any cooling or reset period required by the equipment. Keep a simple record of the program, duration, settings, comfort, and reasons for stopping early."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is a 30-minute Quantum Energy Bed session long enough?",
+        answer: "Thirty minutes is the company’s stated starting point for most users. Whether it is appropriate depends on the exact model, selected program, settings, and individual circumstances; follow the current operating instructions."
+      },
+      {
+        question: "Can a Quantum Energy Bed session last longer than 45 minutes?",
+        answer: "Do not exceed the stated program or equipment limit on your own. If a manual permits a different duration, use only that model-specific instruction and consider comfort and individual safety guidance."
+      },
+      {
+        question: "Does every modality run for the full session?",
+        answer: "Not necessarily. A preset program may sequence, pulse, or independently control light, PEMF, heat, vibration, or sound. Confirm what the chosen program actually does rather than assuming every feature runs continuously."
+      }
+    ],
+    sources: [
+      { label: "Quantum Energy Beds: Frequently asked questions", url: qebFaq },
+      { label: "FDA: Draft guidance for photobiomodulation devices", url: fdaPbmGuidance },
+      { label: "Review of photobiomodulation parameters and dosing", url: pbmReview },
+      { label: "NCCIH: Magnets for pain—what the science says", url: nccihMagnets }
+    ],
+    related: [
+      { title: "How Often Can You Use a Quantum Energy Bed?", slug: "how-often-can-you-use-quantum-energy-bed" },
+      { title: "What Does a Quantum Energy Bed Session Feel Like?", slug: "what-does-quantum-energy-bed-session-feel-like" }
+    ]
+  },
+  {
     slug: "how-much-does-quantum-energy-bed-cost",
     title: "How Much Does a Quantum Energy Bed Cost?",
     description: "See the current Quantum Energy Bed price, what is included, which ownership costs to check, and how to compare cash and financing offers.",
