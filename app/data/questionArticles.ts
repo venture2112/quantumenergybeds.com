@@ -17,8 +17,95 @@ const ftcWarranties = "https://consumer.ftc.gov/articles/warranties";
 const cfpbInstallmentLoans = "https://www.consumerfinance.gov/ask-cfpb/what-is-a-personal-installment-loan-en-2114/";
 const qebFaq = "https://www.quantumenergybeds.com/faq";
 const qebFinancing = "https://www.quantumenergybeds.com/financing";
+const fdaGeneralWellness = "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices";
 
 export const questionArticles: QuestionArticleData[] = [
+  {
+    slug: "do-quantum-energy-beds-really-work",
+    title: "Do Quantum Energy Beds Really Work? How to Evaluate the Evidence",
+    description: "Learn how to evaluate Quantum Energy Bed evidence, separate component research from whole-system claims, and recognize reliable support.",
+    image: "/images/questions/quantum-energy-bed-evidence.webp",
+    imageAlt: "Quality reviewer examining unbranded research documents with an empty full-body wellness bed in the background",
+    intro: "“Does it work?” is incomplete until a seller identifies the exact result promised. A multi-modal wellness bed combines technologies, so each claim needs evidence that matches the product and its use.",
+    quickAnswer: "There is no single evidence rating for every product called a Quantum Energy Bed. Research exists on individual technologies such as photobiomodulation and pulsed electromagnetic fields, but findings depend on the exact device, settings, protocol, population, and measured outcome. Those studies do not automatically prove that a complete multi-modal bed treats a condition or that combining more features produces better results.",
+    sections: [
+      {
+        heading: "First define what “work” means",
+        paragraphs: [
+          "A broad statement such as “supports wellness” is not the same as a testable claim. Relaxation, comfort, sleep quality, pain, circulation, recovery time, and treatment of a disease are different outcomes. Ask the seller to state the intended use clearly and explain how it was measured.",
+          "Some questions concern equipment performance rather than health. Whether LEDs emit stated wavelengths, a heating element reaches its specified range, or a controller runs the selected program can be tested directly. Confirming an output does not, by itself, establish a biological or clinical benefit."
+        ]
+      },
+      {
+        heading: "Match the evidence to the exact technology and protocol",
+        paragraphs: [
+          "A study is most relevant when its equipment, wavelength or field characteristics, intensity, exposure time, body area, schedule, and users resemble the claim being evaluated. FDA’s draft guidance for photobiomodulation devices lists wavelength, irradiance, radiant dose, treatment distance, output mode, session schedule, and treatment area as separate parameters.",
+          "That specificity matters. A favorable result from one 660-nanometer light device cannot simply be transferred to another light source with different output, much less to heat, vibration, sound, negative-ion, or PEMF features. A study of one component also does not test the combined bed."
+        ]
+      },
+      {
+        heading: "Look for evidence that can answer cause and effect",
+        paragraphs: [
+          "Testimonials and before-and-after stories can describe a person’s experience, but they cannot separate the equipment from expectations, natural change, other treatments, or lifestyle factors. Laboratory and animal studies may help explain a possible mechanism, yet they do not establish that people will experience a claimed result.",
+          "For health-benefit claims, the Federal Trade Commission generally expects competent and reliable scientific evidence. Its current guidance says randomized, controlled human clinical testing is generally needed and that study quality, sample size, duration, outcome measures, the full body of evidence, and independent replication all matter. Several weak studies do not become strong evidence merely because they are numerous."
+        ]
+      },
+      {
+        heading: "Separate what is established, preliminary, and promotional",
+        paragraphs: [
+          "An engineering specification verified under stated test conditions is different from a clinical outcome. Research on individual modalities may be established for certain devices and intended uses, preliminary for others, or absent for a particular combination. A responsible explanation should say which of those descriptions applies to each claim.",
+          "Words such as “quantum,” “cellular,” “frequency,” “detox,” and “synergy” can be marketing language unless they are tied to a defined measurement and suitable evidence. Scientific-sounding terminology, patents, expert endorsements, awards, or references to unrelated research do not substitute for direct support."
+        ]
+      },
+      {
+        heading: "Understand what FDA and wellness terminology can—and cannot—show",
+        paragraphs: [
+          "FDA’s revised General Wellness guidance, issued January 6, 2026, addresses low-risk products intended to promote a healthy lifestyle. Being described or marketed as a general wellness product is not proof that a particular health benefit has been clinically demonstrated, and it does not turn a wellness product into medical treatment.",
+          "FDA also states that establishment registration and device listing do not mean a device is approved, cleared, or authorized. If a seller claims FDA clearance or approval, ask for the exact model, database entry, intended use, and decision document. Regulatory status and scientific substantiation are related questions, but they are not interchangeable."
+        ]
+      },
+      {
+        heading: "Use a practical evidence checklist before deciding",
+        paragraphs: [
+          "Ask for full citations and the complete operating manual, not a cropped quotation or a list of logos. Check whether the research studied people, used the same product and settings, measured the promised outcome, included an appropriate comparison group, reported limitations and adverse events, and agrees with the wider evidence.",
+          "For personal medical questions, show the exact manual and specifications to a licensed healthcare professional. Do not use a Quantum Energy Bed to replace diagnosis, treatment, medication, or urgent evaluation. Keep general wellness goals modest and follow the device instructions."
+        ],
+        bullets: [
+          "What exact outcome is being promised?",
+          "Was the complete bed studied, or only one component?",
+          "Do the device settings and session schedule match?",
+          "Were human participants and a suitable comparison group used?",
+          "Are limitations, funding, conflicts, and adverse events disclosed?",
+          "Does the claim go beyond the study’s actual conclusion?"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does research on red light or PEMF prove the whole bed works?",
+        answer: "No. Component research applies only to the tested device, parameters, protocol, users, and outcome. It cannot automatically establish a benefit for a different device or the complete combined system."
+      },
+      {
+        question: "Is an FDA-registered Quantum Energy Bed proven effective?",
+        answer: "No. FDA says registration and listing do not denote approval, clearance, authorization, safety, or effectiveness. Verify any regulatory claim for the exact model and intended use."
+      },
+      {
+        question: "What is the strongest evidence for a health claim?",
+        answer: "Well-designed controlled human studies that test the same product and claimed outcome are generally more persuasive than testimonials, mechanisms, or unrelated component studies. Quality and consistency across the evidence matter."
+      }
+    ],
+    sources: [
+      { label: "FTC: Health Products Compliance Guidance", url: ftcClaims },
+      { label: "FDA: General Wellness Policy for Low Risk Devices", url: fdaGeneralWellness },
+      { label: "FDA: Registered, certified, approved, and cleared device terms", url: fdaDeviceTerms },
+      { label: "FDA: Draft guidance for photobiomodulation devices", url: fdaPbmGuidance },
+      { label: "Review of photobiomodulation parameters and dosing", url: pbmReview }
+    ],
+    related: [
+      { title: "Is a Quantum Energy Bed FDA Approved?", slug: "is-quantum-energy-bed-fda-approved" },
+      { title: "What Is a Multi-Modal Wellness Bed and How Does It Work?", slug: "what-is-multi-modal-wellness-bed" }
+    ]
+  },
   {
     slug: "how-long-is-quantum-energy-bed-session",
     title: "How Long Is a Quantum Energy Bed Session?",
