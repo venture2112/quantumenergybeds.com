@@ -1,5 +1,6 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import TaggedContactForm from "../components/TaggedContactForm";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -102,9 +103,8 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="p-8 rounded-2xl border border-slate-200 bg-white shadow-lg">
               <h2 className="text-2xl font-semibold mb-6 text-slate-900">Send a Message</h2>
-              <form 
-                action="https://formsubmit.co/info@quantumenergybeds.com" 
-                method="POST"
+              <TaggedContactForm
+                source="Contact Page Form - Quantum Energy Beds"
                 className="space-y-6"
               >
                 <input type="hidden" name="_cc" value="hello@quanivo.com" />
@@ -182,7 +182,7 @@ export default function Contact() {
                 >
                   Send Message
                 </button>
-              </form>
+              </TaggedContactForm>
             </div>
           </div>
         </div>

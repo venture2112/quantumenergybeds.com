@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import TaggedContactForm from "./components/TaggedContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -433,9 +434,8 @@ export default function Home() {
             </div>
 
             <div className="bg-slate-50 rounded-3xl p-8 md:p-10">
-              <form
-                action="https://formsubmit.co/info@quantumenergybeds.com"
-                method="POST"
+              <TaggedContactForm
+                source="Homepage Contact Form - Quantum Energy Beds"
                 className="space-y-6"
               >
                 <input type="hidden" name="_cc" value="hello@quanivo.com" />
@@ -526,7 +526,7 @@ export default function Home() {
                 >
                   📖 Download Free Ebook First
                 </Link>
-              </form>
+              </TaggedContactForm>
             </div>
           </div>
         </div>
