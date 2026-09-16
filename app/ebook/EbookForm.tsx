@@ -24,32 +24,36 @@ export default function EbookForm() {
       return;
     }
 
-    // Process contact/tagging in background (don't block user)
+    // Send the lead to Global Control and the email delivery service.
     try {
-      const response = await fetch("https://formsubmit.co/ajax/info@quantumenergybeds.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        },
-        body: JSON.stringify({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          source: "Free Ebook Download",
-          _subject: "New Ebook Lead - Quantum Energy Beds",
-          _template: "table",
+      const [globalControlResponse, emailResponse] = await Promise.all([
+        fetch("/api/ebook", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
         }),
-      });
+        fetch("https://formsubmit.co/ajax/info@quantumenergybeds.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify({
+            first_name: formData.firstName,
+            last_name: formData.lastName,
+            email: formData.email,
+            source: "Free Ebook Download",
+            _subject: "New Ebook Lead - Quantum Energy Beds",
+            _template: "table",
+          }),
+        }),
+      ]);
 
-      const data = await response.json();
-
-      if (response.ok) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-        setErrorMessage(data.error || "Something went wrong. Please try again.");
+      if (!globalControlResponse.ok || !emailResponse.ok) {
+        throw new Error("Lead submission failed");
       }
+
+      setStatus("success");
     } catch (error) {
       setStatus("error");
       setErrorMessage("Failed to submit. Please check your connection and try again.");
