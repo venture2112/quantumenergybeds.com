@@ -21,20 +21,23 @@ module.exports = async function handler(request, response) {
       return response.status(400).json({ error: "Valid email is required" });
     }
 
-    await upsertGlobalControlContact({
-      email,
-      firstName,
-      lastName,
-      customFields: {
-        source: "Ebook Download - Quantum Energy Beds",
-        ebookRequested: new Date().toISOString(),
-      },
-    });
+    // Fire the confirmed lead-source tag first. Global Control creates the
+    // contact automatically when the email address is not already present.
+    await fireGlobalControlTag(email, EBOOK_DOWNLOAD_TAG_ID);
 
+    // Enrich the contact without blocking the ebook after the tag succeeds.
     try {
-      await fireGlobalControlTag(email, EBOOK_DOWNLOAD_TAG_ID);
-    } catch (tagError) {
-      console.error("Ebook tag firing error (non-critical):", tagError);
+      await upsertGlobalControlContact({
+        email,
+        firstName,
+        lastName,
+        customFields: {
+          source: "Ebook Download - Quantum Energy Beds",
+          ebookRequested: new Date().toISOString(),
+        },
+      });
+    } catch (contactError) {
+      console.error("Ebook contact enrichment error (non-critical):", contactError);
     }
 
     return response.status(200).json({
