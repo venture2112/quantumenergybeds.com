@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
@@ -85,6 +86,11 @@ export default function RootLayout({
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
         {children}
+        <ai-bot-bubble id="quantum-energy-beds-v2"></ai-bot-bubble>
+        <Script
+          src="https://chat.aibotstudio.com/script/aibot-widget.umd.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

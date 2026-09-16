@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 
 export default function Financing() {
-  const [productPrice, setProductPrice] = useState(14900);
+  const productPrice = 14900;
   const [downPayment, setDownPayment] = useState(0);
   const [termMonths, setTermMonths] = useState(36);
   const [interestRate, setInterestRate] = useState(14.99);
@@ -116,15 +116,9 @@ export default function Financing() {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">Product Price</label>
-                  <select 
-                    value={productPrice} 
-                    onChange={(e) => setProductPrice(Number(e.target.value))}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-blue-500 bg-white"
-                  >
-                    <option value={14900}>$14,900 - Wellness Pod</option>
-                    <option value={18900}>$18,900 - Wellness Pod Pro</option>
-                    <option value={24900}>$24,900 - Wellness Pod Elite</option>
-                  </select>
+                  <div className="w-full px-4 py-3 border border-slate-300 rounded-xl bg-slate-50 text-slate-900">
+                    $14,900 - Wellness Pod
+                  </div>
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">Down Payment</label>
