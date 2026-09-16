@@ -1,18 +1,22 @@
-import { NextRequest, NextResponse } from "next/server";
-import {
+const {
   fireGlobalControlTag,
   upsertGlobalControlContact,
-} from "../../lib/globalControl";
+} = require("../lib/globalControlServer");
 
 const CONTACT_FORM_TAG_ID = "6aa9ea024c80625f7250237e";
 
-export async function POST(request: NextRequest) {
+module.exports = async function handler(request, response) {
+  if (request.method !== "POST") {
+    response.setHeader("Allow", "POST");
+    return response.status(405).json({ error: "Method not allowed" });
+  }
+
   try {
-    const body = await request.json();
+    const body = typeof request.body === "string" ? JSON.parse(request.body) : request.body || {};
     const email = String(body.email || "").trim();
 
     if (!email || !email.includes("@")) {
-      return NextResponse.json({ error: "Valid email is required" }, { status: 400 });
+      return response.status(400).json({ error: "Valid email is required" });
     }
 
     const fullName = String(body.name || "").trim();
@@ -21,7 +25,6 @@ export async function POST(request: NextRequest) {
     const lastName = String(
       body.last_name || (nameParts.length > 1 ? nameParts.slice(1).join(" ") : ""),
     ).trim();
-    const submittedAt = new Date().toISOString();
 
     await upsertGlobalControlContact({
       email,
@@ -32,15 +35,14 @@ export async function POST(request: NextRequest) {
         phone: String(body.phone || ""),
         interest: String(body.interest || ""),
         message: String(body.message || ""),
-        contactFormSubmitted: submittedAt,
+        contactFormSubmitted: new Date().toISOString(),
       },
     });
 
     await fireGlobalControlTag(email, CONTACT_FORM_TAG_ID);
-
-    return NextResponse.json({ success: true });
+    return response.status(200).json({ success: true });
   } catch (error) {
     console.error("Contact form Global Control error:", error);
-    return NextResponse.json({ error: "Unable to sync contact" }, { status: 500 });
+    return response.status(500).json({ error: "Unable to sync contact" });
   }
-}
+};
