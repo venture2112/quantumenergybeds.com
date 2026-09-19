@@ -22,8 +22,96 @@ const nccihRelaxation = "https://www.nccih.nih.gov/health/relaxation-techniques-
 const nccihStress = "https://www.nccih.nih.gov/health/stress";
 const nccihMusic = "https://www.nccih.nih.gov/health/music-and-health-what-you-need-to-know";
 const cdcStress = "https://www.cdc.gov/mental-health/living-with/index.html";
+const sbaBusinessPlanning = "https://www.sba.gov/counseling/plan-your-business/";
+const adaSmallBusiness = "https://www.ada.gov/resources/title-iii-primer/";
+const qebProducts = "https://www.quantumenergybeds.com/wellness-pod-products";
 
 export const questionArticles: QuestionArticleData[] = [
+  {
+    slug: "how-to-add-quantum-energy-bed-to-spa",
+    title: "How Do You Add a Quantum Energy Bed to a Spa or Wellness Practice?",
+    description: "Use this practical checklist to evaluate demand, space, costs, staff workflow, compliant marketing, and a measured launch for a wellness bed.",
+    image: "/images/questions/add-wellness-bed-spa.webp",
+    imageAlt: "Spa owner measuring the walkway beside an open full-body wellness bed while planning its installation",
+    intro: "Adding a multi-modal wellness bed is more than buying equipment. A workable launch connects client demand, room logistics, staff procedures, responsible claims, and realistic financial assumptions.",
+    quickAnswer: "Define the client and wellness experience you intend to serve. Verify demand, obtain exact model specifications, map delivery and room clearance, calculate costs and break-even sessions, and create procedures for screening, operation, cleaning, and incident response. Train staff to use supportable general-wellness language. Pilot the service and measure utilization instead of relying on projected revenue or broad health promises.",
+    sections: [
+      {
+        heading: "Confirm the service fits your clients",
+        paragraphs: [
+          "Decide whether the bed will be a stand-alone relaxation service, membership benefit, or add-on to an existing visit. The choice affects appointment length, staffing, privacy, pricing, and how clients understand the experience.",
+          "Ask current clients whether they would book it and what comparable services they use. Review nearby spas, recovery studios, gyms, and wellness centers for session length, price, packaging, and positioning. The Small Business Administration recommends testing demand, market size, location, saturation, and competitor pricing."
+        ]
+      },
+      {
+        heading: "Plan the room, delivery path, and utilities",
+        paragraphs: [
+          "Use the specifications for the exact model, not a generic spa-bed estimate. Quantum Energy Beds currently lists the full-body bed at about 7.54 feet long, 2.85 feet wide, 3.94 feet high, and approximately 250 pounds. Those equipment dimensions are only the starting footprint. Allow space for the lid to open, a client to enter and exit, staff assistance, cleaning, controls, and an unobstructed path.",
+          "Measure doorways, turns, elevators, thresholds, and the room before delivery. Confirm floor suitability, power requirements, ventilation, operating temperature, and manufacturer clearances in writing. Ask where standard delivery ends and what optional white-glove placement includes."
+        ],
+        bullets: [
+          "Mark the full equipment and open-lid footprint on the floor",
+          "Test the delivery route from truck access to the treatment room",
+          "Preserve accessible circulation and emergency egress",
+          "Verify local permits, insurance coverage, lease approval, and applicable accessibility rules"
+        ]
+      },
+      {
+        heading: "Build a conservative financial model",
+        paragraphs: [
+          "Calculate equipment, financing, delivery, room preparation, insurance changes, supplies, training, software, marketing, and a downtime reserve. Separate one-time costs from monthly fixed costs and per-session costs such as labor, laundry, cleaning supplies, payment fees, and consumables.",
+          "Then model several utilization levels instead of one optimistic forecast. SBA expresses unit break-even as fixed costs divided by price minus variable cost per session. Use actual open hours, appointment length, turnover time, realistic booking gaps, and expected cancellations. A price seen at another spa is market information—not proof that your clients will pay it or that the service will be profitable."
+        ]
+      },
+      {
+        heading: "Create the client and staff workflow before launch",
+        paragraphs: [
+          "Write an operating procedure based on the current manual. Cover approved programs, session limits, pre-use questions, relevant precautions, safe entry and exit, stopping a session, cleaning, equipment checks, and what staff should do if someone feels unwell.",
+          "Train every operator and document that training. Run mock appointments from booking through room turnover so the advertised appointment length includes orientation and cleaning. Decide when a question must be referred to the manufacturer or a licensed healthcare professional rather than answered by front-desk staff."
+        ]
+      },
+      {
+        heading: "Market the experience without turning it into treatment",
+        paragraphs: [
+          "Describe what the client can verify: the session format, included features, duration, comfort options, and general-wellness purpose. Avoid claims that the complete bed diagnoses, treats, cures, prevents, or guarantees improvement in a disease or condition. Do not transfer a study of one light, heat, sound, or electromagnetic device to the entire system.",
+          "FTC guidance requires health-related advertising claims to be truthful, not misleading, and supported by competent and reliable scientific evidence. Testimonials, disclaimers, or the word “wellness” do not repair an unsupported claim. FDA's January 2026 guidance likewise distinguishes low-risk healthy-lifestyle uses from disease-related intended uses. Review website copy, intake language, staff scripts, ads, and social posts together."
+        ]
+      },
+      {
+        heading: "Pilot the service and improve from real data",
+        paragraphs: [
+          "Begin with a limited schedule and a clear introductory offer. Track inquiries, bookings, completed sessions, repeat visits, average revenue, turnover time, cancellations, comfort feedback, and equipment downtime. Do not collect medical information you do not need.",
+          "After the pilot, compare actual contribution per session and utilization with the assumptions in your plan. Adjust scheduling, orientation, packaging, or room workflow before increasing marketing. A good launch decision is supported by repeatable operations and real client behavior—not a guaranteed-ROI sales projection."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What types of businesses can add a Quantum Energy Bed?",
+        answer: "Spas, wellness studios, gyms, recovery facilities, chiropractic offices, and similar businesses may consider one, but permitted services, professional scope, insurance, and facility requirements vary. Verify the rules that apply to your location and business."
+      },
+      {
+        question: "How much room does a full-body wellness bed require?",
+        answer: "The current listed bed dimensions are about 7.54 by 2.85 by 3.94 feet, but the room must also accommodate the open lid, safe entry and exit, staff access, cleaning, controls, accessible circulation, and any manufacturer or code clearances."
+      },
+      {
+        question: "How much should a spa charge for a wellness-bed session?",
+        answer: "There is no universal price. Compare local alternatives, calculate fixed and per-session costs, include realistic utilization and turnover time, and test pricing with your actual clients. Do not base the decision on a promised revenue figure alone."
+      }
+    ],
+    sources: [
+      { label: "Quantum Energy Beds: Product specifications", url: qebProducts },
+      { label: "Quantum Energy Beds: Delivery and setup FAQ", url: qebFaq },
+      { label: "U.S. Small Business Administration: Planning, market research, and startup costs", url: sbaBusinessPlanning },
+      { label: "FTC: Health Products Compliance Guidance", url: ftcClaims },
+      { label: "FDA: General Wellness Policy for Low Risk Devices", url: fdaGeneralWellness },
+      { label: "ADA.gov: Primer for small businesses", url: adaSmallBusiness }
+    ],
+    related: [
+      { title: "How Much Does a Quantum Energy Bed Cost?", slug: "how-much-does-quantum-energy-bed-cost" },
+      { title: "The Business Case for Wellness Technology", slug: "business-case-wellness-technology" }
+    ]
+  },
   {
     slug: "can-quantum-energy-bed-help-you-relax",
     title: "Can a Quantum Energy Bed Help You Relax?",
