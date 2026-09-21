@@ -25,8 +25,101 @@ const cdcStress = "https://www.cdc.gov/mental-health/living-with/index.html";
 const sbaBusinessPlanning = "https://www.sba.gov/counseling/plan-your-business/";
 const adaSmallBusiness = "https://www.ada.gov/resources/title-iii-primer/";
 const qebProducts = "https://www.quantumenergybeds.com/wellness-pod-products";
+const qebBedInfo = "https://www.quantumenergybeds.com/quantum-bed-info";
 
 export const questionArticles: QuestionArticleData[] = [
+  {
+    slug: "can-you-customize-quantum-energy-bed-session",
+    title: "Can You Customize a Quantum Energy Bed Session?",
+    description: "Learn how to customize a Quantum Energy Bed session by choosing features, using presets, changing one setting at a time, and staying within device instructions.",
+    image: "/images/questions/customize-wellness-bed-session.webp",
+    imageAlt: "Wellness bed operator selecting separate light, warmth, vibration, and sound controls on a touch display",
+    intro: "A multi-modal wellness bed offers more choices than a single-purpose device, but useful customization is not simply turning every feature to its highest setting.",
+    quickAnswer: "Yes, a Quantum Energy Bed session can be customized through its available controls and programs. Depending on the exact model and software, customization may include selecting individual modalities, choosing compatible combinations, using a preset, and adjusting permitted time or intensity settings. Confirm every option in the current operating manual, begin with a conservative introductory program, and change one variable at a time so comfort and settings remain understandable.",
+    sections: [
+      {
+        heading: "What does session customization actually mean?",
+        paragraphs: [
+          "Quantum Energy Beds currently lists its full-body bed with 12 integrated modalities, a touch display, and AI voice control. A long feature list does not mean every parameter is adjustable or that every feature should run together.",
+          "Customization may mean choosing one feature, selecting a preset, combining compatible features, or changing an allowed intensity or time. Capabilities can differ by model and software, so confirm them in the current manual and an actual control demonstration."
+        ]
+      },
+      {
+        heading: "Start with the purpose of the session",
+        paragraphs: [
+          "Define a modest general-wellness purpose first: perhaps a quiet break, equipment familiarization, gentle warmth, or a comfortable sensory routine. A clear purpose prevents an arbitrary stack of every feature.",
+          "For a first session, the manufacturer’s introductory preset may be simplest. One modality is easier to understand; a combined preset is convenient but adds variables. Neither format is automatically stronger, safer, or more effective because it uses more technology."
+        ],
+        bullets: [
+          "Single feature: fewer variables and easier comfort tracking",
+          "Preset program: simpler setup with manufacturer-defined limits",
+          "Selected combination: more control, but more compatibility questions",
+          "All available features: only when the manual specifically permits it"
+        ]
+      },
+      {
+        heading: "Treat every modality as its own system",
+        paragraphs: [
+          "Intensity does not mean the same thing across modalities. Light has wavelength, irradiance, distance, coverage, and time. PEMF may involve frequency, waveform, field strength, position, and duration. Heat has temperature and time; vibration has pattern and amplitude; sound has content and volume.",
+          "A study of one device or protocol therefore cannot be transferred automatically to a complete bed. FDA’s draft photobiomodulation guidance includes combination products with components such as electrostimulation or mechanical massage, while noting that some low-risk general-wellness light products may be outside its scope."
+        ]
+      },
+      {
+        heading: "Change one setting at a time",
+        paragraphs: [
+          "A repeatable approach is more informative than constant experimentation. Keep the program and time the same, then adjust one permitted setting later. Record duration, active features, comfort, and anything unusual. One session is not proof of a health effect.",
+          "If an introductory preset feels too warm, use the manual-approved lower heat setting next time while leaving other settings unchanged. Greater comfort reveals a preference—not a medical dose or treatment response."
+        ]
+      },
+      {
+        heading: "Use a simple customization checklist",
+        paragraphs: [
+          "Verify who may operate the bed, how to stop it, which features are compatible, permitted ranges, and maximum time. Make sure the user can communicate and exit safely. Businesses should train staff on one documented workflow.",
+          "Begin with the manufacturer’s lowest comfortable or introductory setting. Stop for pain, dizziness, overheating, visual discomfort, anxiety, numbness, or any unexpected symptom. More heat, light, vibration, or sound is not necessarily better."
+        ],
+        bullets: [
+          "Confirm the exact model, software version, and current manual",
+          "Choose one goal and one approved starting program",
+          "Write down active features and allowed settings",
+          "Change only one variable during the next comparison",
+          "Save a comfortable routine only after it is repeatable"
+        ]
+      },
+      {
+        heading: "Know when personalization requires professional input",
+        paragraphs: [
+          "Customization does not override contraindications. Seek professional guidance for an implanted electronic device, pregnancy, light sensitivity, an eye condition, impaired heat sensation, or another relevant concern. NCCIH notes that magnets may interfere with pacemakers and insulin pumps and advises pregnant people or those with a health condition to consult a provider.",
+          "FDA’s January 2026 guidance distinguishes general wellness from disease claims, while FTC guidance requires reliable evidence for health claims. A customized setting is an equipment configuration—not proof that the complete bed produces a medical outcome."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can you use just one modality on a Quantum Energy Bed?",
+        answer: "The product is described as supporting single-modality and combined experiences, but confirm the controls on the exact model and follow its current manual. Some components or presets may have compatibility rules that are not obvious from a feature list."
+      },
+      {
+        question: "Should every wellness-bed feature be turned on at once?",
+        answer: "Not automatically. Use all features together only when the manufacturer’s instructions specifically allow that combination. More features or higher settings do not guarantee a better result and may make comfort or troubleshooting harder to evaluate."
+      },
+      {
+        question: "How do you find the best Quantum Energy Bed settings?",
+        answer: "Start with the approved introductory program, define a modest wellness goal, and change only one permitted variable at a time. Track comfort and repeatability. For medical questions or personal contraindications, ask a qualified healthcare professional rather than designing your own treatment protocol."
+      }
+    ],
+    sources: [
+      { label: "Quantum Energy Beds: Product controls and integrated modalities", url: qebProducts },
+      { label: "Quantum Energy Beds: Single and combined modality overview", url: qebBedInfo },
+      { label: "FDA: General Wellness Policy for Low Risk Devices (January 2026)", url: fdaGeneralWellness },
+      { label: "FDA: Draft guidance for photobiomodulation devices and combination products", url: fdaPbmGuidance },
+      { label: "NCCIH: Magnets for pain—evidence and safety considerations", url: nccihMagnets },
+      { label: "FTC: Health Products Compliance Guidance", url: ftcClaims }
+    ],
+    related: [
+      { title: "What Is a Multi-Modal Wellness Bed and How Does It Work?", slug: "what-is-multi-modal-wellness-bed" },
+      { title: "What Does a Quantum Energy Bed Session Feel Like?", slug: "what-does-quantum-energy-bed-session-feel-like" }
+    ]
+  },
   {
     slug: "how-to-add-quantum-energy-bed-to-spa",
     title: "How Do You Add a Quantum Energy Bed to a Spa or Wellness Practice?",
