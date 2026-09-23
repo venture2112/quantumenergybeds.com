@@ -26,8 +26,96 @@ const sbaBusinessPlanning = "https://www.sba.gov/counseling/plan-your-business/"
 const adaSmallBusiness = "https://www.ada.gov/resources/title-iii-primer/";
 const qebProducts = "https://www.quantumenergybeds.com/wellness-pod-products";
 const qebBedInfo = "https://www.quantumenergybeds.com/quantum-bed-info";
+const wholeBodyVibrationReview = "https://pmc.ncbi.nlm.nih.gov/articles/PMC11396361/";
+const wholeBodyVibrationOlderAdults = "https://pmc.ncbi.nlm.nih.gov/articles/PMC10342949/";
+const mayoWholeBodyVibration = "https://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/whole-body-vibration/faq-20057958";
 
 export const questionArticles: QuestionArticleData[] = [
+  {
+    slug: "what-is-vibration-therapy-wellness-bed",
+    title: "What Is Vibration Therapy in a Wellness Bed?",
+    description: "Learn what bed-integrated vibration therapy is, how it differs from vibration plates and massage, which settings matter, and how to assess evidence and safety.",
+    image: "/images/questions/vibration-therapy-wellness-bed.webp",
+    imageAlt: "Adult lying on a horizontal padded wellness bed while holding a simple vibration control in a warm, quiet room",
+    intro: "The word vibration covers several different technologies. Knowing which one a wellness bed uses is essential before comparing settings, studies, or claims.",
+    quickAnswer: "Vibration therapy uses controlled mechanical oscillations transferred through a surface to part or all of the body. In a wellness bed, vibration is delivered while the user lies on a padded support. That is not automatically equivalent to a standing whole-body vibration platform, a handheld massage device, or sound-based vibroacoustic therapy. Frequency, amplitude, acceleration, body position, contact area, and time all affect exposure, so ask for the exact specifications and follow the device instructions.",
+    sections: [
+      {
+        heading: "What does vibration therapy mean?",
+        paragraphs: [
+          "In engineering terms, vibration is repeated mechanical movement around a resting position. A motor or actuator creates oscillations, and a platform, pad, mattress, or handheld head transfers them to the body.",
+          "The label alone does not describe a standardized treatment. Research protocols specify how the motion was delivered, who received it, and for how long. Marketing language such as “healing frequency” does not supply those details and should not be treated as a scientific dose."
+        ]
+      },
+      {
+        heading: "A wellness bed is not the same as a vibration plate",
+        paragraphs: [
+          "Most published whole-body vibration research uses a platform on which participants stand, squat, sit, or exercise. The motion enters mainly through the feet or another contact point and can trigger rapid muscle responses. A bed-integrated system supports the user horizontally and may distribute gentler motion across a larger area.",
+          "That difference matters. Posture, muscle loading, direction of movement, and contact surface can change the physical exposure. Findings from a standing platform cannot be assumed to apply to a padded wellness bed. Quantum Energy Beds lists vibrational therapy as a feature of its full-body bed and specifically notes that the recliner does not include it, but the public product page does not state the vibration frequency, amplitude, or acceleration."
+        ]
+      },
+      {
+        heading: "The settings that determine the experience",
+        paragraphs: [
+          "Frequency is the number of oscillations per second, measured in hertz. Amplitude or displacement describes how far the surface moves. Acceleration reflects how quickly that motion changes. Direction, waveform, active zones, body position, duration, and whether exposure is continuous or intermittent also matter.",
+          "Two devices set to the same frequency can therefore feel very different. Before comparing equipment—or trying to match a research paper—ask the manufacturer which parameters are adjustable, their permitted ranges, where vibration is produced, and which programs are intended for a lying user."
+        ],
+        bullets: [
+          "Frequency range in hertz, not only labels such as low or high",
+          "Amplitude or displacement and acceleration, if available",
+          "Movement direction, active zones, and preset patterns",
+          "Session limits, weight limits, and the emergency-stop method"
+        ]
+      },
+      {
+        heading: "What does the evidence actually show?",
+        paragraphs: [
+          "A 2024 review of whole-body vibration research found that outcomes depend heavily on frequency, amplitude, duration, and the population studied. It described possible applications in exercise and rehabilitation while emphasizing that more research is needed and that dosing is central to interpreting results.",
+          "A systematic review in older adults reported improvement in lower-limb strength, but studies used different platforms and protocols, and some reported adverse events. Mayo Clinic concludes that comprehensive evidence remains limited and that whole-body vibration should not replace aerobic or strength exercise. None of those findings establishes that a multi-modal wellness bed produces the same outcome."
+        ]
+      },
+      {
+        heading: "What a first session may feel like",
+        paragraphs: [
+          "On a bed, vibration may feel like rhythmic buzzing, pulsing, or mild movement through the supported areas. It should not be painful. Sensation can change with clothing, padding, body position, and the setting, so a conservative introductory program is easier to evaluate than the strongest option.",
+          "Learn how to stop the bed before the session begins. Keep the first exposure within the current manual, avoid changing several modalities at once, and stop for pain, dizziness, headache, nausea, visual disturbance, numbness, or any unexpected symptom."
+        ]
+      },
+      {
+        heading: "When to ask a healthcare professional first",
+        paragraphs: [
+          "Ask a qualified healthcare professional before using vibration equipment if you are pregnant, recently had surgery or an acute injury, have a condition affecting balance, bones, joints, circulation, the nervous system, or have another reason mechanical movement may be unsafe. The device manual may list additional precautions and exclusions.",
+          "Vibration can be presented as a general-wellness or comfort feature, but that is different from a medical claim. A bed should not be described as diagnosing, treating, curing, or preventing a condition without evidence for the exact device and intended use."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is vibration therapy the same as massage?",
+        answer: "No. Both may create a rhythmic physical sensation, but massage applies pressure and movement through hands or a massage mechanism, while vibration uses repeated mechanical oscillations. Some equipment combines them, so check how the specific device produces motion."
+      },
+      {
+        question: "Is bed vibration the same as whole-body vibration exercise?",
+        answer: "Not necessarily. Whole-body vibration studies commonly use standing or exercise platforms. A horizontal padded bed changes posture, loading, contact area, and often intensity, so research results should not be transferred without matching the device and protocol."
+      },
+      {
+        question: "What vibration setting should a beginner use?",
+        answer: "Use the manufacturer’s introductory or lowest comfortable program and stay within the manual’s time limit. The best starting point depends on the exact frequency, amplitude, body position, and user; a label such as low is not interchangeable across devices."
+      }
+    ],
+    sources: [
+      { label: "Quantum Energy Beds: Full-body bed modalities and product comparison", url: qebProducts },
+      { label: "The Clinical Utility of Whole Body Vibration (2024 review)", url: wholeBodyVibrationReview },
+      { label: "Impacts of Whole-Body Vibration on Muscle Strength, Power, and Endurance in Older Adults (2023 systematic review)", url: wholeBodyVibrationOlderAdults },
+      { label: "Mayo Clinic: Whole-body vibration—benefits, limits, and precautions", url: mayoWholeBodyVibration },
+      { label: "FDA: General Wellness Policy for Low Risk Devices (January 2026)", url: fdaGeneralWellness },
+      { label: "FTC: Health Products Compliance Guidance", url: ftcClaims }
+    ],
+    related: [
+      { title: "Can You Customize a Quantum Energy Bed Session?", slug: "can-you-customize-quantum-energy-bed-session" },
+      { title: "What Does a Quantum Energy Bed Session Feel Like?", slug: "what-does-quantum-energy-bed-session-feel-like" }
+    ]
+  },
   {
     slug: "can-you-customize-quantum-energy-bed-session",
     title: "Can You Customize a Quantum Energy Bed Session?",
