@@ -34,6 +34,91 @@ const saunaEvidenceReview = "https://pubmed.ncbi.nlm.nih.gov/30077204/";
 
 export const questionArticles: QuestionArticleData[] = [
   {
+    slug: "how-to-prepare-quantum-energy-bed-session",
+    title: "How Do You Prepare for a Quantum Energy Bed Session?",
+    description: "Prepare for a Quantum Energy Bed session with a practical checklist covering the program, clothing, hydration, safety questions, controls, and follow-up.",
+    image: "/images/questions/prepare-quantum-energy-bed-session.webp",
+    imageAlt: "Guest preparing water and comfortable clothing beside an open lay-down wellness bed while an attendant explains the stop control",
+    intro: "Good preparation is less about a complicated ritual and more about knowing which features will run, checking personal safety, and making the session easy to stop or adjust.",
+    quickAnswer: "Before a Quantum Energy Bed session, confirm the exact model, selected modalities, planned time, and current operating instructions. Wear comfortable loose clothing appropriate for the program, hydrate normally, disclose relevant implants, pregnancy, medications, and health concerns, and learn how to stop the equipment. For a first visit, use a conservative approved program and change only one variable at a time.",
+    sections: [
+      {
+        heading: "Confirm the exact program before you arrive",
+        paragraphs: [
+          "A multi-modal bed is not one standardized exposure. Quantum Energy Beds currently lists light, PEMF, far-infrared heat, vibration, and other features in the full-size bed. Preparation can change depending on which feature or approved combination will be active.",
+          "Ask for the model name, program, expected duration, adjustable settings, and current user instructions. If an operator cannot explain what will run or how to stop it, pause until those questions are answered."
+        ]
+      },
+      {
+        heading: "Review personal safety questions in advance",
+        paragraphs: [
+          "Tell the operator about an implanted electronic device, pregnancy, a condition that affects heat sensation or balance, recent surgery or injury, light-sensitive skin, or medication that may increase sensitivity to light. This is not a universal list of contraindications; the relevant questions depend on the chosen modalities and the exact device instructions.",
+          "NCCIH notes that some magnets may interfere with devices such as pacemakers and insulin pumps and advises people who are pregnant or have a health condition to speak with a healthcare provider before magnetic therapy. The American Academy of Dermatology similarly advises checking whether red light could interact with medication or another treatment. Obtain guidance from the clinician who understands your circumstances rather than relying on a general sales statement."
+        ]
+      },
+      {
+        heading: "Dress for comfort and the selected modalities",
+        paragraphs: [
+          "The Quantum Energy Beds FAQ recommends comfortable, loose-fitting clothing made from natural fibers such as cotton and says users remain clothed. That is a practical default for a general session, but clothing also changes how light reaches the skin. If light exposure is part of the program, ask what the manufacturer instructs for coverage and positioning.",
+          "Do not assume that jewelry, a phone, cosmetics, or another personal item must always be removed. Follow the model-specific instructions and keep loose objects clear of hinges, moving parts, and the treatment area. Bring any recommended eye protection; if the instructions require goggles, use the specified type rather than ordinary sunglasses."
+        ]
+      },
+      {
+        heading: "Keep food, water, and timing simple",
+        paragraphs: [
+          "The company FAQ advises drinking water before and after sessions in which far-infrared heat may cause sweating. Hydrate normally rather than forcing excessive water. There is no universal fasting rule for a general wellness-bed session, so follow any model-specific direction and any dietary or fluid guidance from your healthcare professional.",
+          "Allow enough time to use the restroom, change layers if needed, and arrive without rushing. If you feel feverish, faint, dehydrated, unusually sensitive to heat, or otherwise unwell, postponing and seeking appropriate medical advice is more sensible than pushing through a session."
+        ]
+      },
+      {
+        heading: "Use a first-session checklist at the bed",
+        paragraphs: [
+          "Before lying down, have the operator identify the entry and exit method, stop control, communication method, heat setting, light or eye-protection instructions, and planned end time. Confirm that you can ask for a lower setting or stop at any point. A typical session is listed as 30 to 45 minutes, but that range is not a required starting dose for every person or program.",
+          "For an introductory session, a conservative manufacturer-approved preset is easier to evaluate than turning on every feature. Keep the position comfortable and change one permitted setting at a time. Stop for pain, dizziness, nausea, shortness of breath, unusual visual symptoms, or any unexpected reaction."
+        ],
+        bullets: [
+          "Program and active modalities confirmed",
+          "Duration and permitted settings understood",
+          "Stop control and exit method demonstrated",
+          "Eye protection and communication plan confirmed"
+        ]
+      },
+      {
+        heading: "Afterward, record comfort—not a diagnosis",
+        paragraphs: [
+          "Rise slowly, especially after warmth or a long period lying down, and take a moment before leaving. Record the program, time, settings, clothing, and how comfortable the session felt. Those notes can help an operator keep the next general-wellness session consistent without guessing which variable mattered.",
+          "A pleasant or unpleasant short-term sensation does not diagnose a condition or prove a treatment effect. FDA’s January 2026 guidance distinguishes general-wellness uses from claims to diagnose, cure, mitigate, prevent, or treat disease. Contact a qualified healthcare professional about persistent or concerning symptoms."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What should I wear for a Quantum Energy Bed session?",
+        answer: "The company FAQ recommends comfortable, loose-fitting clothing made from natural fibers such as cotton. Ask whether the selected light or heat program has additional clothing instructions, and follow the current manual rather than a universal rule."
+      },
+      {
+        question: "Should I eat before a wellness-bed session?",
+        answer: "There is no universal fasting requirement for a general wellness-bed session. Follow the specific device or operator instructions, choose what is normally comfortable for you, and follow a clinician’s advice if a medical condition affects food, fluids, blood sugar, or heat tolerance."
+      },
+      {
+        question: "Do I need to remove jewelry or my phone?",
+        answer: "Follow the exact model instructions and the operator’s safety procedure. Keep phones and loose items out of the bed unless the manual permits them, and ask before the session if you have an implanted electronic device or are unsure about metal or magnetic accessories."
+      }
+    ],
+    sources: [
+      { label: "Quantum Energy Beds: Session length, clothing, hydration, and safety FAQ", url: qebFaq },
+      { label: "Quantum Energy Beds: Full-size bed specifications and modalities", url: qebProducts },
+      { label: "NCCIH: Magnets for Pain—evidence and safety precautions", url: nccihMagnets },
+      { label: "FDA: Magnets and implanted medical devices", url: fdaMagnets },
+      { label: "American Academy of Dermatology: Red-light therapy safety", url: aadRedLightSafety },
+      { label: "FDA: General Wellness Policy for Low Risk Devices (January 2026)", url: fdaGeneralWellness }
+    ],
+    related: [
+      { title: "How Long Is a Quantum Energy Bed Session?", slug: "how-long-is-quantum-energy-bed-session" },
+      { title: "What Does a Quantum Energy Bed Session Feel Like?", slug: "what-does-quantum-energy-bed-session-feel-like" }
+    ]
+  },
+  {
     slug: "quantum-energy-bed-vs-infrared-sauna",
     title: "Quantum Energy Bed vs. Infrared Sauna: What’s the Difference?",
     description: "Compare a Quantum Energy Bed with an infrared sauna by purpose, heat, features, experience, space, safety, evidence, and total ownership needs.",
