@@ -106,10 +106,17 @@ export async function POST(request: NextRequest) {
       signal: AbortSignal.timeout(10000),
       cache: "no-store",
     });
-    const result = (await response.json()) as GCEnvelope<{ tagIds?: string[] }>;
+    let result: GCEnvelope<{ tagIds?: string[] }> | null = null;
+    if (response.status !== 201) {
+      try {
+        result = (await response.json()) as GCEnvelope<{ tagIds?: string[] }>;
+      } catch {
+        result = null;
+      }
+    }
     let tagConfirmed =
-      (response.status === 201 && result.type !== "error") ||
-      (result.type === "response" && result.data.tagIds?.includes(CONTACT_TAG_ID) === true);
+      response.status === 201 ||
+      (result?.type === "response" && result.data.tagIds?.includes(CONTACT_TAG_ID) === true);
 
     // Verify through the contact record itself if the fire response omits tag IDs.
     if (!tagConfirmed) {
@@ -132,7 +139,7 @@ export async function POST(request: NextRequest) {
     }
 
     if (!tagConfirmed) {
-      const reason = result.type === "error" ? result.error?.message : "Tag membership was not confirmed";
+      const reason = result?.type === "error" ? result.error?.message : "Tag membership was not confirmed";
       console.error("GC contact delivery failed", reason ?? "Invalid response");
       return jsonError("Unable to deliver your message. Please try again.", 502);
     }
