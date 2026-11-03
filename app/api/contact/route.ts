@@ -109,12 +109,10 @@ export async function POST(request: NextRequest) {
     const result = (await response.json()) as GCEnvelope<{ tagIds?: string[] }>;
     let tagConfirmed = result.type === "response" && result.data.tagIds?.includes(CONTACT_TAG_ID) === true;
 
-    // GC's response can differ across API versions; confirm actual membership
-    // before reporting success so a completed tag fire is never shown as failure.
+    // Verify through the contact record itself if the fire response omits tag IDs.
     if (!tagConfirmed) {
       const verifyUrl = new URL(`${GC_API_URL}/contacts`);
       verifyUrl.searchParams.set("search", email);
-      verifyUrl.searchParams.set("tags", CONTACT_TAG_ID);
       verifyUrl.searchParams.set("limit", "100");
       verifyUrl.searchParams.set("withCounts", "false");
 
@@ -124,9 +122,11 @@ export async function POST(request: NextRequest) {
         cache: "no-store",
       });
       const verified = (await verifyResponse.json()) as GCEnvelope<{ contacts?: GCContact[] }>;
-      tagConfirmed =
-        verified.type === "response" &&
-        verified.data.contacts?.some((contact) => contact.email?.toLowerCase() === email) === true;
+      const verifiedContact =
+        verified.type === "response"
+          ? verified.data.contacts?.find((contact) => contact.email?.toLowerCase() === email)
+          : undefined;
+      tagConfirmed = verifiedContact?.tags?.includes(CONTACT_TAG_ID) === true;
     }
 
     if (!tagConfirmed) {
