@@ -15,6 +15,7 @@ type GCContact = {
   lastName?: string;
   name?: string;
   phone?: string;
+  tags?: string[];
 };
 
 function text(input: Record<string, unknown>, key: string, max = 4000) {
@@ -56,8 +57,6 @@ export async function POST(request: NextRequest) {
   let phone = text(input, "phone", 100);
 
   try {
-    // Tag firing upserts contacts and clears omitted name/phone fields. Read an
-    // existing record first so optional blank form fields do not erase saved data.
     const searchUrl = new URL(`${GC_API_URL}/contacts`);
     searchUrl.searchParams.set("search", email);
     searchUrl.searchParams.set("limit", "100");
@@ -108,8 +107,30 @@ export async function POST(request: NextRequest) {
       cache: "no-store",
     });
     const result = (await response.json()) as GCEnvelope<{ tagIds?: string[] }>;
-    if (result.type !== "response" || !result.data.tagIds?.includes(CONTACT_TAG_ID)) {
-      const reason = result.type === "error" ? result.error?.message : "Tag was not confirmed";
+    let tagConfirmed = result.type === "response" && result.data.tagIds?.includes(CONTACT_TAG_ID) === true;
+
+    // GC's response can differ across API versions; confirm actual membership
+    // before reporting success so a completed tag fire is never shown as failure.
+    if (!tagConfirmed) {
+      const verifyUrl = new URL(`${GC_API_URL}/contacts`);
+      verifyUrl.searchParams.set("search", email);
+      verifyUrl.searchParams.set("tags", CONTACT_TAG_ID);
+      verifyUrl.searchParams.set("limit", "100");
+      verifyUrl.searchParams.set("withCounts", "false");
+
+      const verifyResponse = await fetch(verifyUrl, {
+        headers: { "X-API-KEY": apiKey },
+        signal: AbortSignal.timeout(10000),
+        cache: "no-store",
+      });
+      const verified = (await verifyResponse.json()) as GCEnvelope<{ contacts?: GCContact[] }>;
+      tagConfirmed =
+        verified.type === "response" &&
+        verified.data.contacts?.some((contact) => contact.email?.toLowerCase() === email) === true;
+    }
+
+    if (!tagConfirmed) {
+      const reason = result.type === "error" ? result.error?.message : "Tag membership was not confirmed";
       console.error("GC contact delivery failed", reason ?? "Invalid response");
       return jsonError("Unable to deliver your message. Please try again.", 502);
     }
