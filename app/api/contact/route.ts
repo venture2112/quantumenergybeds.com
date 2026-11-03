@@ -15,8 +15,21 @@ type GCContact = {
   lastName?: string;
   name?: string;
   phone?: string;
-  tags?: string[];
+  tags?: Array<string | { id?: string; tagId?: string; _id?: string }>;
+  tagIds?: string[];
 };
+
+function contactHasTag(contact: GCContact | undefined) {
+  if (!contact) return false;
+  if (contact.tagIds?.includes(CONTACT_TAG_ID)) return true;
+  return (
+    contact.tags?.some((tag) =>
+      typeof tag === "string"
+        ? tag === CONTACT_TAG_ID
+        : [tag.id, tag.tagId, tag._id].includes(CONTACT_TAG_ID),
+    ) ?? false
+  );
+}
 
 function text(input: Record<string, unknown>, key: string, max = 4000) {
   return typeof input[key] === "string" ? (input[key] as string).trim().slice(0, max) : "";
@@ -133,7 +146,7 @@ export async function POST(request: NextRequest) {
         verified.type === "response"
           ? verified.data.contacts?.find((contact) => contact.email?.toLowerCase() === email)
           : undefined;
-      tagConfirmed = verifiedContact?.tags?.includes(CONTACT_TAG_ID) === true;
+      tagConfirmed = contactHasTag(verifiedContact);
     }
 
     if (!tagConfirmed) {
