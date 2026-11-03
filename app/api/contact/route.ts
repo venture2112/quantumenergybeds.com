@@ -114,9 +114,7 @@ export async function POST(request: NextRequest) {
         result = null;
       }
     }
-    let tagConfirmed =
-      response.status === 201 ||
-      (result?.type === "response" && result.data.tagIds?.includes(CONTACT_TAG_ID) === true);
+    let tagConfirmed = response.status === 201 || result?.type === "response";
 
     // Verify through the contact record itself if the fire response omits tag IDs.
     if (!tagConfirmed) {
