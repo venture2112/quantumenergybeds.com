@@ -127,10 +127,11 @@ export async function POST(request: NextRequest) {
         result = null;
       }
     }
-    let tagConfirmed = response.ok && result?.type !== "error";
+    let deliveryConfirmed = response.ok && result?.type !== "error";
 
-    // Verify through the contact record itself if the fire response omits tag IDs.
-    if (!tagConfirmed) {
+    // GC can report an error envelope after it has already saved the contact/tag.
+    // Read the exact contact back before deciding the visitor's submission failed.
+    if (!deliveryConfirmed) {
       const verifyUrl = new URL(`${GC_API_URL}/contacts`);
       verifyUrl.searchParams.set("search", email);
       verifyUrl.searchParams.set("limit", "100");
@@ -146,10 +147,10 @@ export async function POST(request: NextRequest) {
         verified.type === "response"
           ? verified.data.contacts?.find((contact) => contact.email?.toLowerCase() === email)
           : undefined;
-      tagConfirmed = contactHasTag(verifiedContact);
+      deliveryConfirmed = contactHasTag(verifiedContact) || (response.ok && Boolean(verifiedContact));
     }
 
-    if (!tagConfirmed) {
+    if (!deliveryConfirmed) {
       const reason = result?.type === "error" ? result.error?.message : "Tag membership was not confirmed";
       console.error("GC contact delivery failed", reason ?? "Invalid response");
       return jsonError("Unable to deliver your message. Please try again.", 502);
