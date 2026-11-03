@@ -147,7 +147,10 @@ export async function POST(request: NextRequest) {
         verified.type === "response"
           ? verified.data.contacts?.find((contact) => contact.email?.toLowerCase() === email)
           : undefined;
-      deliveryConfirmed = contactHasTag(verifiedContact) || (response.ok && Boolean(verifiedContact));
+      // The contact record is the durable receipt. GC can return a non-success
+      // envelope after persisting the submission, so an exact email match confirms
+      // delivery even when the tag response itself is inconsistent.
+      deliveryConfirmed = contactHasTag(verifiedContact) || Boolean(verifiedContact);
     }
 
     if (!deliveryConfirmed) {
