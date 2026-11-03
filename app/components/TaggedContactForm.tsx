@@ -36,10 +36,24 @@ export default function TaggedContactForm({ children, className, source }: Tagge
         throw new Error("Contact API returned a non-JSON response");
       }
       if (!response.ok || result.ok !== true) {
-        console.error("QEB contact API rejected the submission", {
-          status: response.status,
-          error: result.error ?? "No error message returned",
-        });
+        const apiError = result.error;
+        const errorSummary =
+          typeof apiError === "string"
+            ? apiError.slice(0, 300)
+            : apiError && typeof apiError === "object" && "message" in apiError
+              ? String(apiError.message).slice(0, 300)
+              : typeof apiError;
+        console.error(
+          "QEB contact API rejected the submission",
+          JSON.stringify({
+            status: response.status,
+            contentType: response.headers.get("content-type"),
+            responseOk: response.ok,
+            resultOk: result.ok,
+            errorType: typeof apiError,
+            errorSummary,
+          }),
+        );
         throw new Error(`Contact API failed with HTTP ${response.status}`);
       }
 
