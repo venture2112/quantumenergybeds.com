@@ -49,6 +49,14 @@ export default function TaggedContactForm({ children, className, source }: Tagge
             status: response.status,
             contentType: response.headers.get("content-type"),
             responseOk: response.ok,
+            responseUrl: response.url,
+            responseKeys: Object.keys(result),
+            responseType: "type" in result ? result.type : undefined,
+            responseSuccess: "success" in result ? result.success : undefined,
+            responseMessage:
+              "message" in result && typeof result.message === "string"
+                ? result.message.slice(0, 200)
+                : undefined,
             resultOk: result.ok,
             errorType: typeof apiError,
             errorSummary,
