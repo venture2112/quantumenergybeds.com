@@ -25,45 +25,9 @@ export default function TaggedContactForm({ children, className, source }: Tagge
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...data, source }),
       });
-      let result: { ok?: boolean; error?: unknown };
-      try {
-        result = (await response.json()) as { ok?: boolean; error?: unknown };
-      } catch {
-        console.error("QEB contact API returned non-JSON", {
-          status: response.status,
-          contentType: response.headers.get("content-type"),
-        });
-        throw new Error("Contact API returned a non-JSON response");
-      }
-      if (!response.ok || result.ok !== true) {
-        const apiError = result.error;
-        const errorSummary =
-          typeof apiError === "string"
-            ? apiError.slice(0, 300)
-            : apiError && typeof apiError === "object" && "message" in apiError
-              ? String(apiError.message).slice(0, 300)
-              : typeof apiError;
-        console.error(
-          "QEB contact API rejected the submission",
-          JSON.stringify({
-            status: response.status,
-            contentType: response.headers.get("content-type"),
-            responseOk: response.ok,
-            responseUrl: response.url,
-            responseKeys: Object.keys(result),
-            responseType: "type" in result ? result.type : undefined,
-            responseSuccess: "success" in result ? result.success : undefined,
-            responseMessage:
-              "message" in result && typeof result.message === "string"
-                ? result.message.slice(0, 200)
-                : undefined,
-            resultOk: result.ok,
-            errorType: typeof apiError,
-            errorSummary,
-          }),
-        );
-        throw new Error(`Contact API failed with HTTP ${response.status}`);
-      }
+      const result = (await response.json()) as { ok?: boolean; success?: boolean };
+      const accepted = result.ok === true || result.success === true;
+      if (!response.ok || !accepted) throw new Error("Contact request failed");
 
       setStatus("success");
       form.reset();
